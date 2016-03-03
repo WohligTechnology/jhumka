@@ -6,13 +6,29 @@
 
 /* Bootstrap Variables Goes Here */
 
-$brand-primary: #0d9dff !default;
+$brand-primary: #c8897a !default;
 $brand-success: #84ce3c !default;
 $brand-warning: #ffec39 !default;
 $brand-danger: #fc483f !default;
 $brand-info: #000072 !default;
 
+$base-color: #4d4d4d !default;
+$dark-color: #ce9586 !default;
+$bg-color: #eac6bb !default;
+$white-color: #eac6bb !default;
+
+$font-family-sans-serif: "ColabThi", sans-serif !default;
+$font-family-serif: "ColabThi",serif !default;
+
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@font-face {
+  font-family: "ColabThi";
+  src: url(ColabThi.otf);
+  src: url(ColabThi.otf#iefix) format("embedded-opentype"), url(../fonts/ColabThi.otf) format("woff"), url(../fonts/ColabThi.otf) format("truetype"), url(../fonts/ColabThi.svg) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   padding-top: 70px;
@@ -33,5 +49,17 @@ img.doneLoading {
 nav li:hover .dropdown-menu {
   display: block;
 }
+a{
+  text-decoration: none;
+  &:hover{
+    outline: 0;
+    text-decoration: none;
+  }
+  &:focus{
+    outline: 0;
+    text-decoration: none;
+  }
+}
+
 /* Start writing sass here */
 @import "fancybox-override";
