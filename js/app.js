@@ -39,7 +39,36 @@ firstapp.directive('img', function($compile, $parse) {
     }
   };
 });
-
+firstapp.directive("scroll", function($window) {
+    return function(scope, element, attrs) {
+        angular.element($window).bind("scroll", function() {
+            var windowHeight = $(window).height();
+            if (windowHeight > 600) {
+                //$('#boutique').boutique();
+            }
+            if (this.pageYOffset >= windowHeight) {
+                console.log(windowHeight);
+                element.addClass('affix');
+            } else {
+                element.removeClass('affix');
+            }
+        });
+    };
+});
+firstapp.directive('autoHeight', function($compile, $parse) {
+    return {
+        restrict: 'EA',
+        replace: false,
+        link: function($scope, element, attrs) {
+            var $element = $(element);
+            var windowHeight = $(window).height();
+            var addHeight = function() {
+                $element.css("min-height", windowHeight);
+            };
+            addHeight();
+        }
+    };
+});
 firstapp.directive('fancyboxBox', function($document) {
     return {
         restrict: 'EA',
