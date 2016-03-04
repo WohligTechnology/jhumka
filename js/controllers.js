@@ -2,13 +2,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
-
-  console.log("Testing Consoles");
-
   $scope.template = TemplateService.changecontent("home");
   $scope.menutitle = NavigationService.makeactive("Home");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+
+  $scope.$on('$viewContentLoaded', function() {
+    $timeout(function() {
+      $('.fullpage').fullpage();
+    });
+  });
 
   $scope.mySlides = [
     'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
@@ -16,6 +19,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
     'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
   ];
+
   $scope.press=[{
     img:"img/p1.jpg",
     title:"The Diamond Store shortlisted for UK Blog Awards 2016",
@@ -28,8 +32,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     img:"img/p3.jpg",
     title:"Designer & Antique Jewels at Dreweatts",
     desc:"It’s just been announced that a new jewellery blog, The Diamond Store Magazine, is up..."
-  }]
+  }];
 })
+
 .controller('CollectionCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   $scope.template = TemplateService.changecontent("collection");
   $scope.menutitle = NavigationService.makeactive("Collection");
