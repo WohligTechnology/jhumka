@@ -11,10 +11,15 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
   $httpProvider.defaults.withCredentials = true;
   $stateProvider
     .state('home', {
-    url: "/home",
+    url: "/home/:name",
     templateUrl: "views/template.html",
     controller: 'HomeCtrl'
   })
+  .state('homeHome', {
+  url: "/",
+  templateUrl: "views/template.html",
+  controller: 'HomeCtrl'
+})
     .state('press', {
     url: "/press",
     templateUrl: "views/template.html",
@@ -25,7 +30,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     templateUrl: "views/template.html",
     controller: 'CollectionCtrl'
   });
-  $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider.otherwise("/");
   $locationProvider.html5Mode(isproduction);
 });
 

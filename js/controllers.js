@@ -1,6 +1,6 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap','ngAnimate', 'ngSanitize', 'angular-flexslider'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout,$stateParams) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("home");
   $scope.menutitle = NavigationService.makeactive("Home");
@@ -9,9 +9,48 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
   $scope.$on('$viewContentLoaded', function() {
     $timeout(function() {
-      $('.fullpage').fullpage();
-    });
+      changepage($stateParams.name);
+    }, 1000);
   });
+
+  $scope.changePage = function(text) {
+    var length = $(".fp-section").length;
+    console.log(length);
+    console.log( $(".fp-section"));
+    if(length == 0)
+    {
+      $('.fullpage').fullpage();
+    }
+    console.log(text);
+    $scope.homeval = text;
+    switch (text) {
+      case "contact":
+        $.fn.fullpage.moveTo(7);
+        break;
+      case "stockists":
+        $.fn.fullpage.moveTo(6);
+        break;
+      case "press":
+        $.fn.fullpage.moveTo(5);
+        break;
+      case "collection":
+        $.fn.fullpage.moveTo(4);
+        break;
+        case "ananya":
+          $.fn.fullpage.moveTo(3);
+          break;
+      case "about":
+        $.fn.fullpage.moveTo(2);
+        break;
+      case "home":
+        $.fn.fullpage.moveTo(1);
+        break;
+      default:
+        $.fn.fullpage.moveTo(1);
+        break;
+    }
+  };
+
 
   $scope.mySlides = [
     'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',

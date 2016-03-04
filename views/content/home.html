@@ -1,33 +1,33 @@
 <div class="fullpage">
   <section class="section home-section">
     <div class="home-slider">
-      <flex-slider flex-slide="s in mySlides">
+      <flex-slider flex-slide="s in mySlides" >
       <li>
-        <img ng-src="{{s}}">
+        <img ng-src="{{s}}" class="img-responsive">
       </li>
     </flex-slider>
     <div class="home-menu">
       <ul>
         <li>
-          <a ui-sref="about">ABOUT</a>
+          <a ng-click="changePage('about')" >ABOUT</a>
         </li>
         <li>
-          <a ui-sref="collection">COLLECTION</a>
+          <a ng-click="changePage('collection')">COLLECTION</a>
         </li>
         <li>
-          <a ui-sref="press">PRESS</a>
+          <a  ng-click="changePage('press')">PRESS</a>
         </li>
         <li>
-          <a ui-sref="stockists">STOCKISTS</a>
+          <a ng-click="changePage('stockists')">STOCKISTS</a>
         </li>
         <li>
-          <a ui-sref="contact">CONTACT</a>
+          <a ng-click="changePage('contact')">CONTACT</a>
         </li>
       </ul>
     </div>
   </div>
 </section>
-<section class="section naya-section">
+<section class="section naya-section" id="naya">
   <div class="container">
     <div class="row">
       <div class="col-md-2">
@@ -212,7 +212,7 @@
     </div>
   </div>
 </section>
-<section class="section contact-section">
+<section class="section contact-section media">
   <div class="container">
     <div class="row">
       <div class="col-md-2">
