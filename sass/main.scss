@@ -60,6 +60,10 @@ a{
     text-decoration: none;
   }
 }
-
+#XMLID_270_{
+  &:hover{
+      fill:red;
+  }
+}
 /* Start writing sass here */
 @import "fancybox-override";
