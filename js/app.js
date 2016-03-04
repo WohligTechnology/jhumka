@@ -14,6 +14,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     url: "/home",
     templateUrl: "views/template.html",
     controller: 'HomeCtrl'
+  })
+    .state('collection', {
+    url: "/collection",
+    templateUrl: "views/template.html",
+    controller: 'CollectionCtrl'
   });
   $urlRouterProvider.otherwise("/home");
   $locationProvider.html5Mode(isproduction);
