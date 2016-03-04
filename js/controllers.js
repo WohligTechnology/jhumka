@@ -57,6 +57,33 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   }]
 
 })
+.controller('PressCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("press");
+  $scope.menutitle = NavigationService.makeactive("Press");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+  $scope.collection=[{
+    img:"img/c1.jpg",
+    desc:"The Lotus is very symbolic and important element in the Chakra’s. "
+  },{
+    img:"img/c2.jpg",
+    desc:"The Lotus is very symbolic and important element in the Chakra’s. "
+  },{
+    img:"img/c3.jpg",
+    desc:"The Lotus is very symbolic and important element in the Chakra’s."
+  },{
+    img:"img/c4.jpg",
+    desc:"The Lotus is very symbolic and important element in the Chakra’s."
+  },{
+    img:"img/c5.jpg",
+    desc:"The Lotus is very symbolic and important element in the Chakra’s."
+  },{
+    img:"img/c6.jpg",
+    desc:"The Lotus is very symbolic and important element in the Chakra’s."
+  }]
+
+})
 
 .controller('headerctrl', function($scope, TemplateService) {
   $scope.template = TemplateService;

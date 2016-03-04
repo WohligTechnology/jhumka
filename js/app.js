@@ -15,6 +15,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     templateUrl: "views/template.html",
     controller: 'HomeCtrl'
   })
+    .state('press', {
+    url: "/press",
+    templateUrl: "views/template.html",
+    controller: 'PressCtrl'
+  })
     .state('collection', {
     url: "/collection",
     templateUrl: "views/template.html",
