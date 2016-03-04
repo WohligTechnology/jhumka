@@ -9,6 +9,20 @@
       </div>
     </div>
   </div>
-
+<div class="slider">
+  <flex-slider class="carousel" flex-slide="content in press track by $index" item-width="265" item-margin="20" animation="slide">
+    <li>
+      <div class="press">
+        <figure>
+          <div class="press-imgholder">
+            <img ng-src="{{content.img}}" alt="" class="img-responsive">
+          </div>
+          <figcaption class="text-uppercase">{{content.caption}}</figcaption>
+          <span>29.01.16</span>
+        </figure>
+      </div>
+    </li>
+  </flex-slider>
+</div>
 </div>
 </section>

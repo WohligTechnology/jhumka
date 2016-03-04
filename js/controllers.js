@@ -83,6 +83,40 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     desc:"The Lotus is very symbolic and important element in the Chakra’s."
   }]
 
+  $scope.press = [
+    {
+      img: "img/p3.jpg",
+      caption: "Self rediges unveils"
+    },
+    {
+      img: "img/p3.jpg",
+      caption: "Self rediges unveils"
+    },
+    {
+      img: "img/p3.jpg",
+      caption: "Self rediges unveils"
+    },
+    {
+      img: "img/p3.jpg",
+      caption: "Self rediges unveils"
+    },
+    {
+      img: "img/p3.jpg",
+      caption: "Self rediges unveils"
+    },
+    {
+      img: "img/p3.jpg",
+      caption: "Self rediges unveils"
+    },
+    {
+      img: "img/p3.jpg",
+      caption: "Self rediges unveils"
+    },
+    {
+      img: "img/p3.jpg",
+      caption: "Self rediges unveils"
+    }
+  ];
 })
 
 .controller('headerctrl', function($scope, TemplateService) {
