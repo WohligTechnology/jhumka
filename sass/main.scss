@@ -178,3 +178,42 @@ background-position: center center;
 .margin0-auto{
   margin: 0 auto;
 }
+// .sticky-bottom {
+//     position: absolute;
+//     top: 0px;
+//     width: 100%;
+//     left: 0;
+//     z-index: 99;
+//     @include transition(all 700ms ease);
+//     &.affix {
+//         position: fixed;
+//         top: 0px;
+//         bottom: auto;
+//         width: 100%;
+//         left: 0;
+//         z-index: 999;
+//     }
+// }
+// .fp-viewing-0  {
+//   .sticky-bottom {
+//     top: calc(100% - 60px)
+//   }
+// }
+.color-base{
+  color:$base-color;
+}
+.naya-detail{
+  p{
+    font-size: 15px;
+  }
+}
+.naya-section{
+  background: url(../img/bg-pattern.jpg)no-repeat;
+  background-size: cover;
+}
+.mt30{
+  margin-top: 30px;
+}
+.margin0{
+  margin: 0px;
+}
