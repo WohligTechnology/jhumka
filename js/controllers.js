@@ -6,13 +6,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.menutitle = NavigationService.makeactive("Home");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
-
-  $scope.$on('$viewContentLoaded', function() {
-    $timeout(function() {
-      changepage($stateParams.name);
-    }, 1000);
-  });
-
   $scope.changePage = function(text) {
     var length = $(".fp-section").length;
     console.log(length);
@@ -51,9 +44,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }
   };
 
+  $scope.$on('$viewContentLoaded', function() {
+    $timeout(function() {
+      $('body').addClass('fp-');
+      $scope.changePage($stateParams.name);
+    }, 1000);
+  });
+
+
 
   $scope.mySlides = [
-    'img/bg1.jpg',
+    'img/bg.jpg',
     'img/bg2.jpg',
     'img/bg3.jpg',
     'img/bg4.jpg'
