@@ -14,8 +14,9 @@ $brand-info: #000072 !default;
 
 $base-color: #4d4d4d !default;
 $dark-color: #ce9586 !default;
+$menu-color: #c98a7a!default;
 $bg-color: #eac6bb !default;
-$white-color: #eac6bb !default;
+$color-white: #fff !default;
 
 $font-family-sans-serif: "ColabThi", sans-serif !default;
 $font-family-serif: "ColabThi",serif !default;
@@ -30,9 +31,9 @@ $font-family-serif: "ColabThi",serif !default;
   font-style: normal;
 }
 
-body {
-  padding-top: 70px;
-}
+// body {
+//   padding-top: 70px;
+// }
 img.loading {
   text-align: center;
   opacity: 1;
@@ -51,6 +52,7 @@ nav li:hover .dropdown-menu {
 }
 a{
   text-decoration: none;
+    cursor: pointer;
   &:hover{
     outline: 0;
     text-decoration: none;
@@ -65,5 +67,114 @@ a{
       fill:red;
   }
 }
+.color-white{
+color:$color-white;
+}
 /* Start writing sass here */
 @import "fancybox-override";
+
+.custom-li{
+  ul{
+    padding: 0px;
+    list-style: none;
+    display: block;
+li{
+  display: inline-block;
+}
+  }
+}
+.social-feed{
+  ul{
+    li{
+      padding: 0px 8px;
+      a{
+        i{
+          font-size: 22px;
+
+        }
+      }
+    }
+  }
+}
+.home-slider{
+  .flex-direction-nav {
+    display: none;
+}
+.flexslider {
+    margin: 0 0 0px;
+    border: 0px solid #ffffff;
+  }
+  .flex-control-nav {
+    bottom: 20px;
+    z-index: 999;
+}
+.flexslider-container {
+    position: relative;
+}
+.flex-control-paging li a {
+
+
+    background: rgba(184, 122, 107, 0.42);
+  -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
+}
+.flex-control-paging li a.flex-active {
+    background: #b87a6b;
+    cursor: default;
+}
+}
+.bg-slider{
+  background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+}
+.navbar-default {
+    background-color: rgba(0, 0, 0, 0.34);
+    border-color: rgba(0, 0, 0, 0);
+
+}
+.pl20{
+      padding-left: 20px;
+}
+.social-feed{
+  padding-top: 16px;
+}
+.naya-logo{
+  padding-top: 10px;
+}
+.slider-mid {
+  @include position(absolute, 50% null null 50%);
+  @include transform (translatex(-50%) translatey(-50%));
+  z-index: 9;
+}
+.position-relative{
+  position: relative;
+}
+.home-menu{
+  position: absolute;
+    bottom: 70px;
+    z-index: 9;
+    text-align: center;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+
+  ul{
+    li{
+      padding: 0px 38px;
+      a{
+        font-size: 20px;
+          color:$menu-color;
+
+        &:hover{
+          color:$menu-color;
+        }
+      }
+    }
+  }
+}
+.margin0-auto{
+  margin: 0 auto;
+}

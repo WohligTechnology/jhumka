@@ -53,10 +53,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
   $scope.mySlides = [
-    'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
-    'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
-    'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
-    'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
+    'img/bg1.jpg',
+    'img/bg2.jpg',
+    'img/bg3.jpg',
+    'img/bg4.jpg'
   ];
 
   $scope.press=[{
