@@ -77,6 +77,9 @@ a{
 .color-white{
 color:$color-white;
 }
+.color-primary{
+  color:$brand-primary;
+}
 /* Start writing sass here */
 @import "fancybox-override";
 
@@ -313,4 +316,44 @@ color: #909090;
 content: "";
 pointer-events: none;
   }
+}
+.border-right{
+  border-right:1px solid #fff;
+}
+.contact-detail{
+      padding-bottom: 30px;
+  p{
+    color:$brand-primary;
+    line-height: 80%;
+  font-size: 15px;
+  }
+}
+.num{
+  span{
+    padding: 20px 0px;
+display: block;
+  }
+}
+.f16{
+  font-size: 16px;
+}
+.form-control::-webkit-input-placeholder {
+  color: $brand-primary;
+  font-family: 'ColabThi';
+}
+.form-control:-moz-placeholder {
+  color: $brand-primary;
+  font-family: 'ColabThi';
+}
+.form-control::-moz-placeholder {
+  color: $brand-primary;
+  font-family: 'ColabThi';
+}
+.form-control:-ms-input-placeholder {
+  color: $brand-primary;
+  font-family: 'ColabThi';
+}
+.form-control{
+  border: 0px solid $brand-primary;
+border-radius: 20px;
 }
