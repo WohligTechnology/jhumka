@@ -17,6 +17,7 @@ $dark-color: #ce9586 !default;
 $menu-color: #c98a7a!default;
 $bg-color: #eac6bb !default;
 $color-white: #fff !default;
+$hover-color: #c88979 !default;
 
 $font-family-sans-serif: "ColabThi","avia", sans-serif !default;
 $font-family-serif: "ColabThi","avia",serif !default;
@@ -71,7 +72,27 @@ a{
 }
 #XMLID_270_{
   &:hover{
-      fill:red;
+      fill:$hover-color;
+  }
+}
+#XMLID_280_{
+  &:hover{
+      fill:$hover-color;
+  }
+}
+#XMLID_281_{
+  &:hover{
+      fill:$hover-color;
+  }
+}
+#XMLID_278_{
+  &:hover{
+      fill:$hover-color;
+  }
+}
+#XMLID_274_{
+  &:hover{
+      fill:$hover-color;
   }
 }
 .color-white{
@@ -356,4 +377,13 @@ display: block;
 .form-control{
   border: 0px solid $brand-primary;
 border-radius: 20px;
+}
+.header{
+  position: relative;
+}
+.image-menu{
+  position: absolute;
+z-index: 9;
+top: 70px;
+    left: -10px;
 }
