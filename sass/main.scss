@@ -431,6 +431,26 @@ width: 100%;
     opacity: 0;
       @include transition(all 300ms ease);
   }
+  .fb-hover{
+    opacity: 0;
+      @include transition(all 300ms ease);
+      i{
+        font-size: 16px;
+padding-top: 8px;
+      }
+  }
+  .click{
+    cursor: pointer;
+    &:hover{
+      .fb-hover{
+        opacity: 1;
+      }
+      .grey-col{
+        fill:#cacaca;
+          @include transition(all 300ms ease);
+      }
+    }
+  }
   .hover-txt{
     cursor: pointer;
     &:hover{
