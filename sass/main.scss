@@ -165,7 +165,7 @@ a {
 .naya-logo {
   // padding-top: 10px;
 }
-.slider-mid {
+.slider-mid { 
   @include position(absolute, 50% null null 50%);
   @include transform (translatex(-50%) translatey(-50%));
   z-index: 9;
@@ -509,3 +509,4 @@ footer {
     display: inherit;
   }
 }
+@import "mobile";
