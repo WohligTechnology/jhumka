@@ -410,29 +410,36 @@ top: 70px;
 .coll-head{
   position: absolute;
 width: 100%;
+    height: 100%;
 }
 .hover-desc {
     position: absolute;
-    bottom: 0px;
     background: #e0e0e0;
     padding: 10px 26px;
-    span{}
     font-family: 'Rajdhani';
     font-weight: 500;
     color: #4d4d4d;
     display: block;
+    bottom: 0px;
+    left: 0px;
 }
 .pad10{
-  padding: 10px;
+    margin: 10px;
 }
 .collection-box{
   .hover-desc{
-    display: none;
+    opacity: 0;
+      @include transition(all 300ms ease);
   }
   .hover-txt{
+    cursor: pointer;
     &:hover{
       .hover-desc{
-        display: block;
+        opacity: 1;
+      }
+      .grey-col{
+        fill:#cacaca;
+          @include transition(all 300ms ease);
       }
     }
   }
