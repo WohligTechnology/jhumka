@@ -80,6 +80,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.menutitle = NavigationService.makeactive("Collection");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+    TemplateService.header = "./views/header2.html";
 
   $scope.collection=[{
     img:"img/c1.jpg",
