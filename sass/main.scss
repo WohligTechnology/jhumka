@@ -166,6 +166,7 @@ background-position: center center;
 .navbar-default {
     background-color: rgba(0, 0, 0, 0.34);
     border-color: rgba(0, 0, 0, 0);
+        padding: 2px 0px 6px 0px;
 
 }
 .pl20{
@@ -175,7 +176,7 @@ background-position: center center;
   padding-top: 16px;
 }
 .naya-logo{
-  padding-top: 10px;
+  // padding-top: 10px;
 }
 .slider-mid {
   @include position(absolute, 50% null null 50%);
@@ -423,4 +424,16 @@ width: 100%;
 }
 .pad10{
   padding: 10px;
+}
+.collection-box{
+  .hover-desc{
+    display: none;
+  }
+  .hover-txt{
+    &:hover{
+      .hover-desc{
+        display: block;
+      }
+    }
+  }
 }
