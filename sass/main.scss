@@ -245,24 +245,27 @@ a {
 }
 .category-title {
   cursor: pointer;
+      position: relative;
   h1 {
     font-family: 'avia';
     color: $brand-primary;
     cursor: pointer;
+      @include position(absolute, 50% null null 50%);
+      @include transform (translatex(-50%) translatey(-50%));
   }
   .hover-category {
-    display: none;
+  opacity: 0;
     @include transition(all 300ms ease);
     cursor: pointer;
   }
   &:hover {
     .hover-category {
-      display: block;
+    opacity: 1;
       @include transition(all 300ms ease);
       cursor: pointer;
     }
     .on-hover-show {
-      display: none;
+    opacity: 0;
       @include transition(all 300ms ease);
     }
   }
