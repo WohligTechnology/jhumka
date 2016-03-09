@@ -34,7 +34,7 @@
       </div>
     </div>
   </section>
- <section class="section naya-section position-relative" id="naya" auto-height>
+  <section class="section naya-section position-relative" id="naya" auto-height>
     <div class="slider-mid">
       <div class="container">
         <div class="row">
@@ -64,7 +64,7 @@
       </div>
     </div>
   </section>
- <section class="section ananya-section naya-section position-relative" auto-height>
+  <section class="section ananya-section naya-section position-relative" auto-height>
     <div class="slider-mid">
       <div class="container">
 
@@ -128,19 +128,21 @@
         <div class="row mmt15">
 
           <div class="col-md-4 col-xs-6" ng-repeat="data in press track by $index">
-            <div class="press-box position-relative">
-              <div class="img-box">
-                <img ng-src="{{data.img}}" alt="{{data.title}}" class="img-responsive">
-              </div>
-              <div class="img-descp">
-                <div class="img-title">
-                  <span>{{data.title}}</span>
+            <a href="">
+              <div class="press-box position-relative">
+                <div class="img-box">
+                  <img ng-src="{{data.img}}" alt="{{data.title}}" class="img-responsive">
                 </div>
-                <div class="img-desc">
-                  <P>{{data.desc}}</P>
+                <div class="img-descp">
+                  <div class="img-title">
+                    <span>{{data.title}}</span>
+                  </div>
+                  <div class="img-desc">
+                    <P>{{data.desc}}</P>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -211,58 +213,61 @@
     </div>
   </section>
   <section class="section  category-section position-relative" auto-height>
-      <div class="slider-mid">
-    <div class="container">
-<div class="row">
-  <div class="col-md-offset-1 col-md-4">
-    <div class="title">
-      <h1 class="color-primary">CONTACT</h1>
-    </div>
-  </div>
-</div>
-      <div class="row mt30">
-        <div class="col-md-offset-1 col-md-4 border-right">
-
-          <div class="contact-detail">
-            <p>#.71, Meher Building,Shivaji Park,</p>
-            <p>Ranade Road,Dadar West, Mumbai,
-            </p>
-            <p>Maharashtra 400028
-            </p>
-            <div class="num">
-              <span class="color-primary f16">+91 22 2445 5034
-              </span>
+    <div class="slider-mid">
+      <div class="container">
+        <div class="row mmt40">
+          <div class="col-md-offset-1 col-md-4">
+            <div class="title">
+              <h1 class="color-primary f20">CONTACT</h1>
             </div>
-          <div class="email">
-              <span class="color-primary f16" >info@naya.com</span>
           </div>
-          </div>
-
         </div>
-        <div class="col-md-offset-1 col-md-4">
-          <div class="contact-form">
-            <form action="">
-              <div class="form-group">
+        <div class="row mt30 mmt10">
+          <div class="col-md-offset-1 col-md-4 border-right">
 
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Name">
+            <div class="contact-detail">
+              <p>#.71, Meher Building,Shivaji Park,</p>
+              <p>Ranade Road,Dadar West, Mumbai,
+              </p>
+              <p>Maharashtra 400028
+              </p>
+              <div class="num">
+                <span class="color-primary f16 f13">+91 22 2445 5034
+              </span>
               </div>
-              <div class="form-group">
+              <div class="email">
+                <span class="color-primary f16 f13">info@naya.com</span>
+              </div>
+            </div>
 
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-              </div>
-              <div class="form-group">
+          </div>
+          <div class="col-md-offset-1 col-md-4">
+            <div class="contact-form">
+              <form action="">
+                <div class="form-group">
 
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Phone">
-              </div>
-              <div class="form-group">
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                </div>
+                <div class="form-group">
 
-                <textarea class="form-control" rows="3" placeholder="Message" style="resize:none;"></textarea>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <div class="form-group">
+
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Phone">
+                </div>
+                <div class="form-group">
+
+                  <textarea class="form-control" rows="3" placeholder="Message" style="resize:none;"></textarea>
+                </div>
+              </form>
+              <div class="pull-right sub">
+                <a href="" class="color-primary">SUBMIT</a>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </section>
 </div>

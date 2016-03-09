@@ -159,7 +159,7 @@ a {
 .pl20 {
   padding-left: 20px;
 }
-.social-feed { 
+.social-feed {
   padding-top: 16px;
 }
 .naya-logo {
@@ -179,11 +179,12 @@ a {
   z-index: 9;
   text-align: center;
   margin: 0 auto;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  width: 100%;
+  // transform: translateX(-50%);
   ul {
     li {
-      padding: 0 38px;
+      padding: 0 15px;
       a {
         font-size: 20px;
         color: $menu-color;
@@ -430,6 +431,12 @@ a {
     &:hover {
       .fb-hover {
         opacity: 1;
+        i{
+          color:#333;
+          &:focus{
+            color:#333;
+          }
+        }
       }
       .grey-col {
         fill: #cacaca;
@@ -508,5 +515,20 @@ footer {
     vertical-align: text-top;
     display: inherit;
   }
+}
+.sub{
+  a {
+     padding-right: 10px;
+     font-size: 18px;
+     &:hover{
+       color:$brand-primary;
+     }
+ }
+}
+img.fancybox-image {
+  opacity: 1;
+}
+#fancybox-thumbs.bottom img {
+  opacity: 1;
 }
 @import "mobile";

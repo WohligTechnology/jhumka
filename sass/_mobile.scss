@@ -120,4 +120,25 @@ $screen-lg: 1200px !default;
 .f15{
   font-size: 15px;
 }
+.f13{
+  font-size: 13px;
+    text-align: justify;
+}
+.contact-detail p {
+    line-height: 60%;
+    font-size: 13px;
+    text-align: justify;
+}
+.num span {
+    padding: 8px 0;
+}
+.border-right {
+    border-right: 0px solid #fff;
+}
+.sub{
+  a {
+     font-size: 16px;
+
+ }
+}
 }
