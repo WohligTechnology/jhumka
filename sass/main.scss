@@ -4,6 +4,8 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
+@import "../bower_components/fancyBox/source/jquery.fancybox.css";
+@import "fancybox-override";
 /* Bootstrap Variables Goes Here */
 $brand-primary: #c8897a !default;
 $brand-success: #84ce3c !default;
@@ -103,8 +105,11 @@ a {
   }
 }
 .fp-viewing-2 {
-  .ananya {
+  .about {
     color: #000!important;
+    #XMLID_270_ {
+      fill: $hover-color;
+    }
   }
 }
 .fp-viewing-3 {
@@ -151,14 +156,15 @@ a {
   color: $brand-primary;
 }
 /* Start writing sass here */
-@import "fancybox-override";
 .custom-li {
   ul {
     padding: 0;
     list-style: none;
     display: block;
+    margin-bottom: 0;
     li {
       display: inline-block;
+      // padding: 0 8px;
     }
   }
 }
@@ -167,6 +173,8 @@ a {
     li {
       padding: 0 8px;
       a {
+        display: inline-block;
+        padding: 17px 0;
         i {
           font-size: 22px;
         }
@@ -214,11 +222,14 @@ a {
 .pl20 {
   padding-left: 20px;
 }
-.social-feed {
-  padding-top: 16px;
-}
+// .social-feed {
+//   padding-top: 16px;
+// }
 .naya-logo {
-  // padding-top: 10px;
+  a {
+    padding: 10px 0;
+    display: inline-block;
+  }
 }
 .slider-mid {
   @include position(absolute, 50% null null 50%);
@@ -428,13 +439,12 @@ a {
   left: -10px;
 }
 .coll-img-box {
-  height: 267px;
-  width: auto;
-  overflow: hidden;
-  margin-bottom: 30px;
+  // height: 267px;
+  width: 100%;
+  position: absolute;
+  top: 0;
   img {
     max-width: 100%;
-    max-height: 100%;
     width: 100%;
   }
 }
@@ -443,11 +453,13 @@ a {
 }
 .collection-box {
   position: relative;
+  height: 320px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 .coll-head {
   position: absolute;
   width: 100%;
-  height: 100%;
 }
 .hover-desc {
   position: absolute;
@@ -459,14 +471,25 @@ a {
   display: block;
   bottom: 0;
   left: 0;
+  width: 100%;
 }
 .pad10 {
   margin: 10px;
 }
 .collection-box {
+  background: #fff;
+  &:hover{
+    .hover-desc {
+      opacity: 1;
+    }
+    .fb-hover {
+      opacity: 0;
+    }
+  }
   .hover-desc {
     opacity: 0;
     @include transition(all 300ms ease);
+    z-index: 1;
   }
   .fb-hover {
     opacity: 0;
@@ -478,6 +501,8 @@ a {
   }
   .click {
     cursor: pointer;
+    position: relative;
+    z-index: 1;
     &:hover {
       .fb-hover {
         opacity: 1;
@@ -496,6 +521,8 @@ a {
   }
   .hover-txt {
     cursor: pointer;
+    position: relative;
+    z-index: 2;
     &:hover {
       .hover-desc {
         opacity: 1;
@@ -541,7 +568,7 @@ footer {
 .scond {
   position: relative;
   cursor: pointer;
-  padding: 10px 0 17px;
+  padding: 12px 0 17px;
   &:hover {
     .dropdowns {
       display: block;
@@ -551,7 +578,7 @@ footer {
 .menu-hover {
   ul {
     margin-bottom: 0;
-    padding-top: 10px;
+    padding-top: 0;
   }
 }
 .ml12 {
