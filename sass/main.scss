@@ -144,9 +144,27 @@ a {
     }
   }
 }
-.fp-viewing-0 {
+.fp-viewing-1 {
   .sticky-bottom {
-    top: calc(100% - 180px);
+    bottom: -50px;
+  }
+}
+.sticky-bottom {
+  position: absolute;
+  top: 0;
+  height: 50px;
+  bottom: auto;
+  width: 100%;
+  left: 0;
+  z-index: 99;
+  @include transition(all 700ms ease);
+  &.affix {
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    width: 100%;
+    left: 0;
+    z-index: 999;
   }
 }
 .color-white {
@@ -264,22 +282,6 @@ a {
 .margin0-auto {
   margin: 0 auto;
 }
-.sticky-bottom {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  left: 0;
-  z-index: 99;
-  @include transition(all 700ms ease);
-  &.affix {
-    position: fixed;
-    top: 0;
-    bottom: auto;
-    width: 100%;
-    left: 0;
-    z-index: 999;
-  }
-}
 .color-base {
   color: $base-color;
 }
@@ -357,6 +359,9 @@ a {
 .address-detail {
   p {
     line-height: 60%;
+  }
+  a {
+    color: $base-color;
   }
 }
 .select-city {
@@ -478,8 +483,12 @@ a {
 }
 .collection-box {
   background: #fff;
-  &:hover{
+  .hover-desc {
+    @include transform(translateY(100px));
+  }
+  &:hover {
     .hover-desc {
+      @include transform(translateY(0px));
       opacity: 1;
     }
     .fb-hover {
@@ -533,6 +542,11 @@ a {
       }
     }
   }
+}
+.footer-css {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 footer {
   background: #000;
@@ -598,7 +612,7 @@ footer {
     padding-right: 10px;
     font-size: 18px;
     &:hover {
-      color: $brand-primary;
+      color: darken($brand-primary, 15%);
     }
   }
 }
@@ -607,5 +621,18 @@ img.fancybox-image {
 }
 #fancybox-thumbs.bottom img {
   opacity: 1;
+}
+.press-box {
+  @include transition(all ease 300ms);
+  overflow: hidden;
+  .img-descp {
+    opacity: 0;
+    transform: translatey(150px);
+    @include transition(all ease 600ms);
+  }
+  &:hover .img-descp {
+    opacity: 1;
+    transform: translatey(0px);
+  }
 }
 @import "mobile";
