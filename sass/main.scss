@@ -144,16 +144,11 @@ a {
     }
   }
 }
-.fp-viewing-1 {
-  .sticky-bottom {
-    bottom: -50px;
-  }
-}
 .sticky-bottom {
   position: absolute;
-  top: 0;
   height: 50px;
-  bottom: auto;
+  top: 0;
+  display: none;
   width: 100%;
   left: 0;
   z-index: 99;
@@ -165,6 +160,11 @@ a {
     width: 100%;
     left: 0;
     z-index: 999;
+  }
+}
+.fp-viewing-1 {
+  .sticky-bottom {
+    display: block;
   }
 }
 .color-white {
@@ -433,9 +433,6 @@ a {
 .form-control {
   border: 0 solid $brand-primary;
   border-radius: 20px;
-}
-.header {
-  position: relative;
 }
 .image-menu {
   position: absolute;
