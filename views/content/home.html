@@ -126,24 +126,25 @@
         <div class="title text-center">
           <h2 class="f20">PRESS</h2>
         </div>
-        <div class="row mmt15">
-
-          <div class="col-md-4 col-xs-6" ng-repeat="data in press track by $index">
-            <a href="">
-              <div class="press-box position-relative">
-                <div class="img-box">
-                  <img ng-src="{{data.img}}" alt="{{data.title}}" class="img-responsive">
-                </div>
-                <div class="img-descp">
-                  <div class="img-title">
-                    <span>{{data.title}}</span>
+        <div class="pad50">
+          <div class="row mmt15">
+            <div class="col-md-4 col-xs-6" ng-repeat="data in press track by $index">
+              <a href="">
+                <div class="press-box position-relative">
+                  <div class="img-box">
+                    <img ng-src="{{data.img}}" alt="{{data.title}}" class="img-responsive">
                   </div>
-                  <div class="img-desc">
-                    <P>{{data.desc}}</P>
+                  <div class="img-descp">
+                    <div class="img-title">
+                      <span>{{data.title}}</span>
+                    </div>
+                    <div class="img-desc">
+                      <P>{{data.desc}}</P>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         </div>
       </div>

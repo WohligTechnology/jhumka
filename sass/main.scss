@@ -36,7 +36,7 @@ $font-family-serif: "ColabThi","avia",serif !default;
   font-style: normal;
 }
 // body {
-//   padding-top: 70px;
+//   overflow-y: scroll!important;
 // }
 img.loading {
   text-align: center;
@@ -65,6 +65,9 @@ a {
     outline: 0;
     text-decoration: none;
   }
+}
+.pad50 {
+  padding: 50px;
 }
 #XMLID_270_ {
   &:hover {
@@ -162,7 +165,13 @@ a {
     z-index: 999;
   }
 }
-.fp-viewing-1 {
+.fp-viewing-1,
+.fp-viewing-2,
+.fp-viewing-3,
+.fp-viewing-4,
+.fp-viewing-5,
+.fp-viewing-6,
+ {
   .sticky-bottom {
     display: block;
   }
@@ -271,9 +280,9 @@ a {
       padding: 0 15px;
       a {
         font-size: 20px;
-        color: $menu-color;
+        color: $base-color;
         &:hover {
-          color: $menu-color;
+          color: darken($base-color, 20%);
         }
       }
     }
@@ -344,7 +353,7 @@ a {
   background: rgba(0, 0, 0, 0.63);
   color: $color-white;
   @include padding(6px 10px 0px 10px);
-  min-height: 120px;
+  min-height: 110px;
 }
 .img-title {
   font-size: 18px;
