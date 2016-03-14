@@ -5,6 +5,7 @@
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
 @import "../bower_components/fancyBox/source/jquery.fancybox.css";
+@import "../bower_components/fancyBox/source/helpers/jquery.fancybox-buttons.css";
 @import "fancybox-override";
 /* Bootstrap Variables Goes Here */
 $brand-primary: #c8897a !default;
@@ -35,9 +36,9 @@ $font-family-serif: "ColabThi","avia",serif !default;
   font-weight: normal;
   font-style: normal;
 }
-// body {
-//   overflow-y: scroll!important;
-// }
+body {
+  overflow-y: scroll !important;
+}
 img.loading {
   text-align: center;
   opacity: 1;
@@ -165,6 +166,10 @@ a {
     z-index: 999;
   }
 }
+.fp-viewing-0,
+ {
+  overflow: hidden !important;
+}
 .fp-viewing-1,
 .fp-viewing-2,
 .fp-viewing-3,
@@ -172,6 +177,7 @@ a {
 .fp-viewing-5,
 .fp-viewing-6,
  {
+  overflow: hidden !important;
   .sticky-bottom {
     display: block;
   }
@@ -313,6 +319,15 @@ a {
 .mt60 {
   margin-top: 60px;
 }
+.pt60 {
+  padding-top: 60px;
+}
+.pt40 {
+  padding-top: 40px;
+}
+.pd80 {
+  padding: 80px;
+}
 .margin0 {
   margin: 0;
 }
@@ -353,14 +368,16 @@ a {
   background: rgba(0, 0, 0, 0.63);
   color: $color-white;
   @include padding(6px 10px 0px 10px);
-  min-height: 110px;
+  min-height: 100px;
 }
 .img-title {
   font-size: 18px;
+  line-height: 125%;
 }
 .img-desc {
-  font-size: 15px;
-  padding-top: 12px;
+  font-size: 14px;
+  padding-top: 5px;
+  line-height: 130%;
 }
 .address {
   padding-left: 30px;
@@ -446,7 +463,7 @@ a {
 .image-menu {
   position: absolute;
   z-index: 9;
-  top: 70px;
+  top: 60px;
   left: -10px;
 }
 .coll-img-box {
@@ -640,5 +657,46 @@ img.fancybox-image {
     opacity: 1;
     transform: translatey(0px);
   }
+}
+#fancybox-buttons {
+  background: rgba(77, 77, 77, 0.9);
+  a.btnPrev {
+    display: none !important;
+  }
+  a.btnPlay {
+    display: none !important;
+  }
+  a.btnNext {
+    display: none !important;
+  }
+  a.btnClose {
+    display: none !important;
+  }
+  &.top {
+    top: auto;
+    bottom: 20px;
+  }
+  a.btnToggle {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+  ul {
+    background: transparent;
+    @include box-shadow(none);
+    border-radius: 0;
+    border: 0;
+    li {
+      border: 0;
+    }
+  }
+  a.btnToggle {
+    border: 0;
+  }
+}
+.fancybox-opened .fancybox-skin {
+  @include box-shadow(none);
+}
+.fancybox-overlay {
+  background-color: rgba(77, 77, 77, 0.9);
 }
 @import "mobile";
