@@ -103,12 +103,11 @@ firstapp.directive('fancybox', function($document) {
           if (this.title) {
             // New line
             this.title += '<br />';
-
-            // Add tweet button
-            this.title += '<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="' + this.href + '">Tweet</a> ';
-
-            // Add FaceBook like button
-            this.title += '<iframe src="//www.facebook.com/plugins/like.php?href=' + this.href + '&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:23px;" allowTransparency="true"></iframe>';
+            this.title += '<div class="icon-image float-left"><img src="img/info.png"></div>';
+            this.title += '<div class="collection-box"><div class="click text-center pad10"><div class="icon-image"><img src="img/share.png"></div><div class="fb-hover"><i class="fa fa-facebook"></i></div><div class="fb-hover"><i class="fa fa-instagram"></i></div></div></div>';
+            // this.title += '<br />';
+            // this.title += '<br />';
+            // this.title += '<i class="fa fa-instagram">';
           }
         },
         afterShow: function() {
@@ -121,8 +120,15 @@ firstapp.directive('fancybox', function($document) {
         // afterClose: function() {
         //   $(document).fullScreen(false);
         // },
-        openEffect: 'fade',
-        closeEffect: 'fade',
+        maxWidth: 800,
+        maxHeight: 600,
+        fitToView: false,
+        width: '70%',
+        height: '70%',
+        autoSize: false,
+        closeClick: false,
+        openEffect: 'none',
+        closeEffect: 'none',
         // closeBtn: true,
         helpers: {
           media: {},

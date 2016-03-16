@@ -130,29 +130,46 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }]
 
     $scope.press = [{
-      img: "img/p3.jpg",
-      caption: "Self rediges unveils"
+      img: "img/p4.jpg",
+      caption: "Self rediges unveils",
+      link: "img/p4.jpg",
+      date:"29/01/16"
     }, {
-      img: "img/p3.jpg",
-      caption: "Self rediges unveils"
+      img: "img/p5.jpg",
+      caption: "Self rediges unveils",
+      link: "http://www.youtube.com/embed/L9szn1QQfas?autoplay=1",
+      isIframe: true,
+      date:"29/01/16"
     }, {
-      img: "img/p3.jpg",
-      caption: "Self rediges unveils"
+      img: "img/p4.jpg",
+      caption: "Self rediges unveils",
+      link: "img/p4.jpg",
+      date:"29/01/16"
     }, {
-      img: "img/p3.jpg",
-      caption: "Self rediges unveils"
+      img: "img/p4.jpg",
+      caption: "Self rediges unveils",
+      link: "img/p4.jpg",
+      date:"29/01/16"
     }, {
-      img: "img/p3.jpg",
-      caption: "Self rediges unveils"
+      img: "img/p4.jpg",
+      caption: "Self rediges unveils",
+      link: "img/p4.jpg",
+      date:"29/01/16"
     }, {
-      img: "img/p3.jpg",
-      caption: "Self rediges unveils"
+      img: "img/p4.jpg",
+      caption: "Self rediges unveils",
+      link: "img/p4.jpg",
+      date:"29/01/16"
     }, {
-      img: "img/p3.jpg",
-      caption: "Self rediges unveils"
+      img: "img/p5.jpg",
+      caption: "Self rediges unveils",
+      link: "http://www.youtube.com/embed/L9szn1QQfas?autoplay=1",
+      date:"29/01/16"
     }, {
-      img: "img/p3.jpg",
-      caption: "Self rediges unveils"
+      img: "img/p5.jpg",
+      caption: "Self rediges unveils",
+      link: "http://www.youtube.com/embed/L9szn1QQfas?autoplay=1",
+      date:"29/01/16"
     }];
   })
 

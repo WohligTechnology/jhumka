@@ -1,29 +1,33 @@
-<section auto-height>
+<section auto-height class="category-section pt60">
   <div ng-include="template.header" class="template header"></div>
-  <div class="container mt60">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="text-center">
-          <div class="title-colletcion">
-            <h4>PRESS</h4>
+  <div class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title text-center pt40">
+            <h1 class="f20 color-primary text-up">PRESS</h1>
           </div>
         </div>
       </div>
-    </div>
-    <div class="slider">
-      <flex-slider class="carousel" flex-slide="content in press track by $index" item-width="265" item-margin="20" animation="slide">
-        <li>
-          <div class="press">
-            <figure>
-              <div class="press-imgholder">
-                <img ng-src="{{content.img}}" alt="" class="img-responsive">
+      <div class="slider mt60">
+        <flex-slider class="carousel" flex-slide="content in press track by $index" item-width="265" item-margin="20" animation="slide">
+          <li>
+            <a href="{{content.link}}" fancybox class="" ng-class="{'fancybox.iframe':content.isIframe}">
+              <!-- <a href="{{content.img}}" ng-if="!content.link" fancybox> -->
+              <div class="press">
+                <figure>
+                  <div class="press-imgholder">
+                    <img ng-src="{{content.img}}" alt="" class="img-responsive">
+                  </div>
+                  <figcaption class="text-uppercase size-big">{{content.caption}}</figcaption>
+                  <div class="text-right">{{content.date}}</div>
+                </figure>
               </div>
-              <figcaption class="text-uppercase">{{content.caption}}</figcaption>
-              <span>29.01.16</span>
-            </figure>
-          </div>
-        </li>
-      </flex-slider>
+            </a>
+            <!-- </a> -->
+          </li>
+        </flex-slider>
+      </div>
     </div>
   </div>
 </section>
