@@ -14,6 +14,18 @@
   .slider {
     width: 560px;
   }
+  .naya-bow {
+    width: 70%;
+  }
+  .mt30 {
+    margin-top: 10px;
+  }
+  .naya-detail p {
+    line-height: 120%;
+  }
+  .width80{
+    width: 80%;
+  }
 }
 @media (max-width: $screen-xs-max) {
   .coll-img-box img {
@@ -26,7 +38,7 @@
   }
   .social-feed ul li a {
     padding: 5px 0;
-}
+  }
 }
 @media (max-width: 480px) {
   .scond {
@@ -87,8 +99,11 @@
     margin-top: 0;
   }
   .mobil-w {
-    width: 50px;
+    width: 80px;
   }
+  .naya-bow {
+    width: 100%;
+}
   .naya-bow {
     img {
       margin: 0 auto;
