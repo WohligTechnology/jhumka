@@ -100,7 +100,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       img: "img/c6.jpg",
       desc: "The Lotus is very symbolic and important element in the Chakra’s."
     }]
-
   })
   .controller('PressCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     $scope.template = TemplateService.changecontent("press");

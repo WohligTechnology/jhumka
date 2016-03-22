@@ -55,6 +55,9 @@ img.doneLoading {
 nav li:hover .dropdown-menu {
   display: block;
 }
+.navbar-brand img {
+    width: 140px;
+}
 a {
   text-decoration: none;
   cursor: pointer;
@@ -331,6 +334,12 @@ a {
 .margin0 {
   margin: 0;
 }
+.uppercase{
+  text-transform: uppercase;
+}
+.bold{
+  font-weight: 600;
+}
 .category-title {
   cursor: pointer;
   position: relative;
@@ -340,6 +349,7 @@ a {
     cursor: pointer;
     @include position(absolute, 50% null null 50%);
     @include transform (translatex(-50%) translatey(-50%));
+    width: 100%;
   }
   .hover-category {
     opacity: 0;
@@ -512,10 +522,6 @@ a {
     @include transform(translateY(100px));
   }
   &:hover {
-    .hover-desc {
-      @include transform(translateY(0px));
-      opacity: 1;
-    }
     .fb-hover {
       opacity: 0;
     }
@@ -524,6 +530,10 @@ a {
     opacity: 0;
     @include transition(all 300ms ease);
     z-index: 1;
+    &.active {
+      @include transform(translateY(0px));
+      opacity: 1;
+    }
   }
   .fb-hover {
     opacity: 0;
