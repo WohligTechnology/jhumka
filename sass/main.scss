@@ -56,7 +56,7 @@ nav li:hover .dropdown-menu {
   display: block;
 }
 .navbar-brand img {
-    width: 140px;
+  width: 140px;
 }
 a {
   text-decoration: none;
@@ -334,10 +334,10 @@ a {
 .margin0 {
   margin: 0;
 }
-.uppercase{
+.uppercase {
   text-transform: uppercase;
 }
-.bold{
+.bold {
   font-weight: 600;
 }
 .category-title {
@@ -355,7 +355,12 @@ a {
     opacity: 0;
     @include transition(all 300ms ease);
     cursor: pointer;
-    img { width: 200px; }
+    a {
+      display: inline-block;
+      img {
+        width: 180px;
+      }
+    }
   }
   &:hover {
     .hover-category {
@@ -491,7 +496,7 @@ a {
   text-transform: uppercase;
 }
 .collection-ht {
-  height: 320px;
+  height: 275px;
 }
 .collection-box {
   position: relative;
@@ -613,8 +618,12 @@ footer {
           }
         }
         .sub-menu {
-          li { padding: 2px 0 0; }
-          li a { padding-left: 40px; }
+          li {
+            padding: 2px 0 0;
+          }
+          li a {
+            padding-left: 40px;
+          }
         }
       }
     }

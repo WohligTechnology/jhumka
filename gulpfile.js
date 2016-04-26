@@ -1,6 +1,9 @@
 var jsArray = [
   './bower_components/jquery/dist/jquery.js',
   './bower_components/flexslider/jquery.flexslider-min.js',
+  './bower_components/fancyBox/source/jquery.fancybox.pack.js',
+  './bower_components/fancyBox/source/helpers/jquery.fancybox-buttons.js',
+  './bower_components/fancyBox/source/helpers/jquery.fancybox-media.js',
   './bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
   './bower_components/fullpage.js/dist/jquery.fullpage.min.js',
   './bower_components/angular/angular.js',
