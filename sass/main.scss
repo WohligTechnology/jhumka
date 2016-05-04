@@ -345,6 +345,7 @@ a {
   position: relative;
   h1 {
     font-family: 'avia';
+    text-transform: uppercase;
     color: $brand-primary;
     cursor: pointer;
     @include position(absolute, 50% null null 50%);

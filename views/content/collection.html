@@ -20,7 +20,7 @@
           <div class="col-md-4 col-sm-6" ng-repeat="collectionsitem in collectionsitems track by $index">
             <div class="collection-box collection-ht">
               <div class="hover-desc" ng-class="{active: hover}">
-                <span>{{collectionsitem.desc}}</span>
+                <span>{{collectionsitem.description}}</span>
               </div>
               <div class="click pull-right text-center pad10">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="14px" viewBox="0 0 116.801 104.286" enable-background="new 0 0 116.801 104.286" xml:space="preserve">
@@ -267,9 +267,9 @@
             <i class="fa fa-facebook"></i>
           </div> -->
               </div>
-              <a fancyBox href="{{collectionsitem.img|serverimage}}" class="fancybox-button" rel="fancybox-button" title=" &nbsp;">
+              <a fancyBox href="{{collectionsitem.image|serverimage}}" class="fancybox-button" rel="fancybox-button" title=" &nbsp;">
                 <div class="coll-img-box">
-                  <img ng-src="{{collectionsitem.img|serverimage}}" alt="" class="img-responsive">
+                  <img ng-src="{{collectionsitem.image|serverimage}}" alt="" class="img-responsive">
                 </div>
               </a>
             </div>

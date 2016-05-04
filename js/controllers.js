@@ -96,7 +96,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     //   img: "img/c6.jpg",
     //   desc: "The Lotus is very symbolic and important element in the Chakra’s."
     // }];
-
+console.log($stateParams);
     NavigationService.getOneCollections($stateParams.id, function(data) {
       $scope.collectionsitems = data;
     });

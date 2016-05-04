@@ -44,7 +44,7 @@ var navigationservice = angular.module('navigationservice', [])
         data: {}
       }).success(callback)
     },
-    
+
     getAllPress: function(callback) {
       $http({
         url: adminURL + "json/getpress",
@@ -52,6 +52,15 @@ var navigationservice = angular.module('navigationservice', [])
         data: {}
       }).success(callback)
     },
-
+    getOneCollections: function(id,callback) {
+      $http({
+        url: adminURL + "json/getcollections?id=",
+        mehod: 'POST',
+        withCredentials: true,
+        data: {
+          "id": id
+        }
+      }).success(callback)
+    },
   };
 });
