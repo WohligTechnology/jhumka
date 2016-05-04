@@ -59,47 +59,47 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     'img/bg42.jpg'
   ];
 
-  $scope.press = [{
-    img: "img/p1.jpg",
-    title: "The Diamond Store shortlisted for UK Blog Awards 2016",
-    desc: "It’s just been announced that a new jewellery blog, The Diamond Store Magazine, is up..."
-  }, {
-    img: "img/p2.jpg",
-    title: "Selfridges unveils its christmas window",
-    desc: "It’s just been announced that a new jewellery blog, The Diamond Store Magazine, is up..."
-  }, {
-    img: "img/p3.jpg",
-    title: "Designer & Antique Jewels at Dreweatts",
-    desc: "It’s just been announced that a new jewellery blog, The Diamond Store Magazine, is up..."
-  }];
+  NavigationService.getAllPress(function(data) {
+    $scope.press = data;
+    console.log(data);
+  });
+
+  NavigationService.getAllCollections(function(data) {
+    $scope.collections = data;
+    console.log(data);
+  });
 })
 
-.controller('CollectionCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('CollectionCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
     $scope.template = TemplateService.changecontent("collection");
     $scope.menutitle = NavigationService.makeactive("Collection");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
 
-    $scope.collection = [{
-      img: "img/c1.jpg",
-      desc: "The Lotus is very symbolic and important element in the Chakra’s. "
-    }, {
-      img: "img/c2.jpg",
-      desc: "The Lotus is very symbolic and important element in the Chakra’s. "
-    }, {
-      img: "img/c3.jpg",
-      desc: "The Lotus is very symbolic and important element in the Chakra’s."
-    }, {
-      img: "img/c4.jpg",
-      desc: "The Lotus is very symbolic and important element in the Chakra’s."
-    }, {
-      img: "img/c5.jpg",
-      desc: "The Lotus is very symbolic and important element in the Chakra’s."
-    }, {
-      img: "img/c6.jpg",
-      desc: "The Lotus is very symbolic and important element in the Chakra’s."
-    }];
+    // $scope.collection = [{
+    //   img: "img/c1.jpg",
+    //   desc: "The Lotus is very symbolic and important element in the Chakra’s. "
+    // }, {
+    //   img: "img/c2.jpg",
+    //   desc: "The Lotus is very symbolic and important element in the Chakra’s. "
+    // }, {
+    //   img: "img/c3.jpg",
+    //   desc: "The Lotus is very symbolic and important element in the Chakra’s."
+    // }, {
+    //   img: "img/c4.jpg",
+    //   desc: "The Lotus is very symbolic and important element in the Chakra’s."
+    // }, {
+    //   img: "img/c5.jpg",
+    //   desc: "The Lotus is very symbolic and important element in the Chakra’s."
+    // }, {
+    //   img: "img/c6.jpg",
+    //   desc: "The Lotus is very symbolic and important element in the Chakra’s."
+    // }];
+
+    NavigationService.getOneCollections($stateParams.id, function(data) {
+      $scope.collectionsitems = data;
+    });
   })
   .controller('PressCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     $scope.template = TemplateService.changecontent("press");
@@ -132,43 +132,43 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       img: "img/p4.jpg",
       caption: "Self rediges unveils",
       link: "img/p4.jpg",
-      date:"29/01/16"
+      date: "29/01/16"
     }, {
       img: "img/p5.jpg",
       caption: "Self rediges unveils",
       link: "http://www.youtube.com/embed/L9szn1QQfas?autoplay=1",
       isIframe: true,
-      date:"29/01/16"
+      date: "29/01/16"
     }, {
       img: "img/p4.jpg",
       caption: "Self rediges unveils",
       link: "img/p4.jpg",
-      date:"29/01/16"
+      date: "29/01/16"
     }, {
       img: "img/p4.jpg",
       caption: "Self rediges unveils",
       link: "img/p4.jpg",
-      date:"29/01/16"
+      date: "29/01/16"
     }, {
       img: "img/p4.jpg",
       caption: "Self rediges unveils",
       link: "img/p4.jpg",
-      date:"29/01/16"
+      date: "29/01/16"
     }, {
       img: "img/p4.jpg",
       caption: "Self rediges unveils",
       link: "img/p4.jpg",
-      date:"29/01/16"
+      date: "29/01/16"
     }, {
       img: "img/p5.jpg",
       caption: "Self rediges unveils",
       link: "http://www.youtube.com/embed/L9szn1QQfas?autoplay=1",
-      date:"29/01/16"
+      date: "29/01/16"
     }, {
       img: "img/p5.jpg",
       caption: "Self rediges unveils",
       link: "http://www.youtube.com/embed/L9szn1QQfas?autoplay=1",
-      date:"29/01/16"
+      date: "29/01/16"
     }];
   })
 

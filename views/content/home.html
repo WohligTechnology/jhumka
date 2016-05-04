@@ -110,18 +110,18 @@
         <div class="title-colletcion">
           <h1 class="color-primary text-up text-center">Collections</h1>
         </div>
-        <div class="row">
+        <div class="row" ng-repeat="collection in collections" ui-sref="collection">
           <div class="col-md-offset-4 col-xs-offset-3 col-md-4 col-xs-6">
             <div class="category-title text-center">
-              <h1 class="on-hover-show">SYNERGIES</h1>
+              <h1 class="on-hover-show">{{collection.name}}</h1>
               <div class="hover-category">
-                <a ui-sref="collection"><img src="img/on-hover.png" alt="ring" class="img-responsive margin0-auto" style="cursor:pointer;"></a>
+                <a ui-sref="collection"><img ng-src="{{collection.image|serverimage}}" alt="ring" class="img-responsive margin0-auto" style="cursor:pointer;"></a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-offset-4 col-xs-offset-3 col-md-4 col-xs-6">
             <div class="category-title text-center">
               <h1 class="on-hover-show uppercase">Celestial Lotus</h1>
@@ -130,7 +130,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -141,18 +141,18 @@
           <h1 class="f20 bold">PRESS</h1>
         </div>
         <div class="row mmt15 pd80">
-          <div class="col-md-4 col-xs-6" ng-repeat="data in press track by $index">
+          <div class="col-md-4 col-xs-6" ng-repeat="pressitem in press">
             <a href="">
               <div class="press-box position-relative">
                 <div class="img-box">
-                  <img ng-src="{{data.img}}" alt="{{data.title}}" class="img-responsive">
+                  <img ng-src="{{pressitem.image|serverimage}}" alt="{{pressitem.name}}" class="img-responsive">
                 </div>
                 <div class="img-descp">
                   <div class="img-title">
-                    <span>{{data.title}}</span>
+                    <span>{{pressitem.name}}</span>
                   </div>
-                  <div class="img-desc">
-                    <P>{{data.desc}}</P>
+                  <div class="img-desc" ng-bind-html="pressitem.description">
+                    <!-- <P>{{pressitem.desc}}</P> -->
                   </div>
                 </div>
               </div>

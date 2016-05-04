@@ -384,7 +384,7 @@ a {
   background: rgba(0, 0, 0, 0.63);
   color: $color-white;
   @include padding(6px 10px 0px 10px);
-  min-height: 100px;
+  // min-height: 100px;
 }
 .img-title {
   font-size: 18px;
@@ -394,6 +394,9 @@ a {
   font-size: 14px;
   padding-top: 5px;
   line-height: 130%;
+  P {
+    margin-bottom: 0;
+  }
 }
 .address {
   padding-left: 30px;
@@ -676,13 +679,16 @@ img.fancybox-image {
   @include transition(all ease 300ms);
   overflow: hidden;
   .img-descp {
+    width: 100%;
     opacity: 0;
-    transform: translatey(150px);
+    @include transform(translatey(150px));
     @include transition(all ease 600ms);
+    height: 85px;
+    overflow: hidden;
   }
   &:hover .img-descp {
     opacity: 1;
-    transform: translatey(0px);
+    @include transform(translatey(0px));
   }
 }
 #fancybox-buttons {

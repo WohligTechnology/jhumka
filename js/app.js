@@ -26,7 +26,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
       controller: 'PressCtrl'
     })
     .state('collection', {
-      url: "/collection",
+      url: "/collection/:id",
       templateUrl: "views/template.html",
       controller: 'CollectionCtrl'
     });
@@ -69,6 +69,17 @@ firstapp.directive("scroll", function($window) {
       }
     });
   };
+});
+firstapp.filter('serverimage', function() {
+  return function(input) {
+    if (input) {
+      return imgurl + input;
+    } else {
+      // return "img/logo.png";
+      return "";
+    }
+  };
+  0
 });
 firstapp.directive('autoHeight', function($compile, $parse) {
   return {

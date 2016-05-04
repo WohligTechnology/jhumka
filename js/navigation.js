@@ -1,15 +1,16 @@
-var adminURL = "";
-if(isproduction)
-{
-  adminURL =  "http://www.wohlig.co.in/demo/index.php";
-}
-else {
-  adminURL = "http://localhost/demo/index.php";
-}
+var adminURL = "http://192.168.1.133/nayabackend/index.php/";
+var imgurl = "http://192.168.1.133/nayabackend/uploads/";
+// if(isproduction)
+// {
+//   adminURL =  "http://www.wohlig.co.in/demo/index.php";
+// }
+// else {
+//   adminURL = "http://localhost/demo/index.php";
+// }
 
 var navigationservice = angular.module('navigationservice', [])
 
-.factory('NavigationService', function() {
+.factory('NavigationService', function($http) {
   var navigation = [{
     name: "Home",
     classis: "active",
@@ -34,6 +35,22 @@ var navigationservice = angular.module('navigationservice', [])
         }
       }
       return menuname;
+    },
+
+    getAllCollections: function(callback) {
+      $http({
+        url: adminURL + "json/getcollections",
+        mehod: 'POST',
+        data: {}
+      }).success(callback)
+    },
+    
+    getAllPress: function(callback) {
+      $http({
+        url: adminURL + "json/getpress",
+        mehod: 'POST',
+        data: {}
+      }).success(callback)
     },
 
   };
