@@ -141,7 +141,7 @@
           <h1 class="f20 bold">PRESS</h1>
         </div>
         <div class="row mmt15 pd80">
-          <div class="col-md-4 col-xs-6" ng-repeat="pressitem in press">
+          <div class="col-md-4 col-xs-6" ng-repeat="pressitem in press | limitTo:3 ">
             <a href="">
               <div class="press-box position-relative">
                 <div class="img-box">

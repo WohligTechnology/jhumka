@@ -10,6 +10,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     var length = $(".fp-section").length;
     console.log(length);
     console.log($(".fp-section"));
+    if (typeof $.fn.fullpage.destroy == 'function') {
+      $.fn.fullpage.destroy('all');
+    }
     if (length === 0) {
       $('.fullpage').fullpage();
     }
@@ -96,7 +99,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     //   img: "img/c6.jpg",
     //   desc: "The Lotus is very symbolic and important element in the Chakra’s."
     // }];
-console.log($stateParams);
+    console.log($stateParams);
     NavigationService.getOneCollections($stateParams.id, function(data) {
       $scope.collectionsitems = data;
     });
@@ -108,6 +111,10 @@ console.log($stateParams);
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
 
+      NavigationService.getAllPress(function(data) {
+        $scope.press = data;
+        console.log(data);
+      });
     $scope.collection = [{
       img: "img/c1.jpg",
       desc: "The Lotus is very symbolic and important element in the Chakra’s. "
