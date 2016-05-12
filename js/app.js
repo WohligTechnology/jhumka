@@ -11,7 +11,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
   $httpProvider.defaults.withCredentials = true;
   $stateProvider
     .state('home', {
-      url: "/home/:name",
+      url: "/home/:id",
       templateUrl: "views/template.html",
       controller: 'HomeCtrl'
     })

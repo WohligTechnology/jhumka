@@ -290,8 +290,10 @@ a {
       a {
         font-size: 20px;
         color: $base-color;
+        @include transition(all ease 500ms);
         &:hover {
-          color: darken($base-color, 20%);
+          color: darken($base-color, 50%);
+          font-weight: 600;
         }
       }
     }
@@ -509,6 +511,9 @@ a {
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
+  svg:hover {
+    color: #000;
+  }
 }
 .coll-head {
   position: absolute;

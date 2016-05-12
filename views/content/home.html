@@ -2,18 +2,11 @@
 <div class="fullpage">
   <section class="section home-section position-relative">
     <div class="home-slider">
-      <flex-slider flex-slide="s in mySlides" class="position-relative">
+      <flex-slider flex-slide="s in mySlides track by $index" class="position-relative">
         <li>
-          <div class="bg-slider" ng-style="{'background-image':'url({{s}})'}" auto-height class="img-responsive"></div>
+          <div class="bg-slider" ng-style="{'background-image':'url({{s.img|serverimage}})'}" auto-height class="img-responsive"></div>
         </li>
       </flex-slider>
-      <!-- <div class="slider-mid">
-
-          <div class="mid-logo text-center">
-            <img src="img/mid-logo.png" alt="logo" class="img-responsive margin0-auto">
-          </div>
-
-    </div> -->
       <div class="home-menu custom-li">
         <ul>
           <li>
@@ -120,17 +113,6 @@
             </div>
           </div>
         </div>
-
-        <!-- <div class="row">
-          <div class="col-md-offset-4 col-xs-offset-3 col-md-4 col-xs-6">
-            <div class="category-title text-center">
-              <h1 class="on-hover-show uppercase">Celestial Lotus</h1>
-              <div class="hover-category">
-                <a ui-sref="collection"><img src="img/on-hover2.png" alt="ring" class="img-responsive margin0-auto" style="cursor:pointer;"></a>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
   </section>
@@ -142,7 +124,7 @@
         </div>
         <div class="row mmt15 pd80">
           <div class="col-md-4 col-xs-6" ng-repeat="pressitem in press | limitTo:3 ">
-            <a href="">
+            <a ui-sref="press">
               <div class="press-box position-relative">
                 <div class="img-box">
                   <img ng-src="{{pressitem.image|serverimage}}" alt="{{pressitem.name}}" class="img-responsive">
@@ -180,7 +162,7 @@
               <div class="col-md-offset-1 col-md-10">
                 <div class="select-city">
                   <select class="form-control">
-                    <option>Mumbai</option>
+                    <option value="{{cities.value}}" ng-repeat="stockists in cities">{{cities.value}}</option>
                   </select>
                 </div>
                 <div class="address">
@@ -249,30 +231,28 @@
                 <a href="mailto:info@naya.com" class="color-primary f16 f13">info@naya.com</a>
               </div>
             </div>
-
           </div>
           <div class="col-md-offset-1 col-md-4 col-sm-7">
             <div class="contact-form">
-              <form action="">
-                <div class="form-group">
-
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Name">
+              <form action="" name="contactForm">
+                <div class="form-group" name="contactForm">
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name*" name="name" ng-model="formData.name" required>
+                  <div class="error-msg" ng-show="contactForm.name.$error.required && contactForm.name.$touched">Please Enter Your Name.</div>
                 </div>
                 <div class="form-group">
-
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email*" name="email" ng-model="formData.email" required>
+                  <div class="error-msg" ng-show="contactForm.email.$error.required && contactForm.email.$touched">Please Enter Your First Email.</div>
                 </div>
                 <div class="form-group">
-
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Phone">
+                  <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="Phone" name="phone" ng-model="formData.phone">
                 </div>
                 <div class="form-group">
-
-                  <textarea class="form-control" rows="3" placeholder="Message" style="resize:none;"></textarea>
+                  <textarea class="form-control" rows="3" placeholder="Message*" style="resize:none;" name="message" ng-model="formData.message" required></textarea>
+                  <div class="error-msg" ng-show="contactForm.message.$error.required && contactForm.message.$touched">Please Enter Some Message.</div>
                 </div>
               </form>
               <div class="pull-right sub">
-                <a href="" class="color-primary">SUBMIT</a>
+                <a href="" class="color-primary" ng-class="{'disabled' : !contactForm.$valid }" ng-click="submitContactForm(contactForm,formData)">SUBMIT</a>
               </div>
             </div>
           </div>

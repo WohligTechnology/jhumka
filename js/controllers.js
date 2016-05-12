@@ -1,4 +1,4 @@
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ngMessages'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
   //Used to name the .html file
@@ -49,21 +49,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.$on('$viewContentLoaded', function() {
     $timeout(function() {
       $('body').addClass('fp-');
-      $scope.changePage($stateParams.name);
+      $scope.changePage($stateParams.id);
     }, 1000);
   });
 
-
-
-  $scope.mySlides = [
-    'img/bg.jpg',
-    'img/bg2.jpg',
-    'img/bg3.png',
-    'img/bg42.jpg'
-  ];
-
   NavigationService.getAllPress(function(data) {
     $scope.press = data;
+    console.log(data);
+  });
+  NavigationService.getAllSiders(function(data) {
+    $scope.mySlides = data;
     console.log(data);
   });
 
@@ -71,6 +66,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.collections = data;
     console.log(data);
   });
+  NavigationService.getStockist(function(data) {
+    $scope.stockists = data;
+    console.log(data);
+  });
+
+  $scope.submitContactForm = function(contactForm, formData) {
+    console.log('form values: ', formData);
+    NavigationService.submitContact(formData, function(data) {
+      console.log(data);
+    });
+  };
 })
 
 .controller('CollectionCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
@@ -111,72 +117,55 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
 
-      NavigationService.getAllPress(function(data) {
-        $scope.press = data;
-        console.log(data);
-      });
-    $scope.collection = [{
-      img: "img/c1.jpg",
-      desc: "The Lotus is very symbolic and important element in the Chakra’s. "
-    }, {
-      img: "img/c2.jpg",
-      desc: "The Lotus is very symbolic and important element in the Chakra’s. "
-    }, {
-      img: "img/c3.jpg",
-      desc: "The Lotus is very symbolic and important element in the Chakra’s."
-    }, {
-      img: "img/c4.jpg",
-      desc: "The Lotus is very symbolic and important element in the Chakra’s."
-    }, {
-      img: "img/c5.jpg",
-      desc: "The Lotus is very symbolic and important element in the Chakra’s."
-    }, {
-      img: "img/c6.jpg",
-      desc: "The Lotus is very symbolic and important element in the Chakra’s."
-    }];
+    NavigationService.getAllPress(function(data) {
+      $scope.press = data;
+      console.log(data);
+    });
 
-    $scope.press = [{
-      img: "img/p4.jpg",
-      caption: "Self rediges unveils",
-      link: "img/p4.jpg",
-      date: "29/01/16"
-    }, {
-      img: "img/p5.jpg",
-      caption: "Self rediges unveils",
-      link: "http://www.youtube.com/embed/L9szn1QQfas?autoplay=1",
-      isIframe: true,
-      date: "29/01/16"
-    }, {
-      img: "img/p4.jpg",
-      caption: "Self rediges unveils",
-      link: "img/p4.jpg",
-      date: "29/01/16"
-    }, {
-      img: "img/p4.jpg",
-      caption: "Self rediges unveils",
-      link: "img/p4.jpg",
-      date: "29/01/16"
-    }, {
-      img: "img/p4.jpg",
-      caption: "Self rediges unveils",
-      link: "img/p4.jpg",
-      date: "29/01/16"
-    }, {
-      img: "img/p4.jpg",
-      caption: "Self rediges unveils",
-      link: "img/p4.jpg",
-      date: "29/01/16"
-    }, {
-      img: "img/p5.jpg",
-      caption: "Self rediges unveils",
-      link: "http://www.youtube.com/embed/L9szn1QQfas?autoplay=1",
-      date: "29/01/16"
-    }, {
-      img: "img/p5.jpg",
-      caption: "Self rediges unveils",
-      link: "http://www.youtube.com/embed/L9szn1QQfas?autoplay=1",
-      date: "29/01/16"
-    }];
+
+    //
+    // $scope.press = [{
+    //   img: "img/p4.jpg",
+    //   caption: "Self rediges unveils",
+    //   link: "img/p4.jpg",
+    //   date: "29/01/16"
+    // }, {
+    //   img: "img/p5.jpg",
+    //   caption: "Self rediges unveils",
+    //   link: "http://www.youtube.com/embed/L9szn1QQfas?autoplay=1",
+    //   isIframe: true,
+    //   date: "29/01/16"
+    // }, {
+    //   img: "img/p4.jpg",
+    //   caption: "Self rediges unveils",
+    //   link: "img/p4.jpg",
+    //   date: "29/01/16"
+    // }, {
+    //   img: "img/p4.jpg",
+    //   caption: "Self rediges unveils",
+    //   link: "img/p4.jpg",
+    //   date: "29/01/16"
+    // }, {
+    //   img: "img/p4.jpg",
+    //   caption: "Self rediges unveils",
+    //   link: "img/p4.jpg",
+    //   date: "29/01/16"
+    // }, {
+    //   img: "img/p4.jpg",
+    //   caption: "Self rediges unveils",
+    //   link: "img/p4.jpg",
+    //   date: "29/01/16"
+    // }, {
+    //   img: "img/p5.jpg",
+    //   caption: "Self rediges unveils",
+    //   link: "http://www.youtube.com/embed/L9szn1QQfas?autoplay=1",
+    //   date: "29/01/16"
+    // }, {
+    //   img: "img/p5.jpg",
+    //   caption: "Self rediges unveils",
+    //   link: "http://www.youtube.com/embed/L9szn1QQfas?autoplay=1",
+    //   date: "29/01/16"
+    // }];
   })
 
 .controller('headerctrl', function($scope, TemplateService) {
