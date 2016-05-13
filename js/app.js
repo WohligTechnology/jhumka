@@ -159,10 +159,10 @@ firstapp.directive('fancybox', function($document) {
                 beforeShow: function() {
                     if (this.title) {
                         // New line
-                        this.title += '<br />';
-                        this.title += '<div class="icon-image float-left"><img src="img/info.png"></div>';
-                        this.title += '<div class="collection-box"><div class="click text-center pad10"><div class="icon-image"><img src="img/share.png"></div><div class="fb-hover"><i class="fa fa-facebook"></i></div><div class="fb-hover"><i class="fa fa-instagram"></i></div><div class="fb-hover"><i class="fa fa-pinterest"></i></div></div></div>';
-                        this.title += '<class="fa fa-arrows-alt"></i>';
+                        // this.title += '<br />';
+                        // this.title += '<div class="icon-image float-left"><img src="img/info.png"></div>';
+                        // this.title += '<div class="collection-box"><div class="click text-center pad10"><div class="icon-image"><img src="img/share.png"></div><div class="fb-hover"><i class="fa fa-facebook"></i></div><div class="fb-hover"><i class="fa fa-instagram"></i></div><div class="fb-hover"><i class="fa fa-pinterest"></i></div></div></div>';
+                        // this.title += '<class="fa fa-arrows-alt"></i>';
                         // this.title += '<br />';
                         // this.title += '<br />';
                         // this.title += '<i class="fa fa-instagram">';
