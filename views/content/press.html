@@ -16,8 +16,14 @@
               <a href="{{pressholder.image|serverimage}}" fancybox class="" ng-class="{'fancybox.iframe':content.isIframe}">
                 <div class="press">
                   <figure>
-                    <div class="press-imgholder">
+                    <div class="press-imgholder" ng-if="pressholder.image !== ''">
                       <img ng-src="{{pressholder.image|serverimage}}" alt="" class="img-responsive">
+                    </div>
+                    <div class="press-imgholder" ng-if="pressholder.video !== ''">
+                      <a href="https://www.youtube.com/v/{{pressholder.video}}" fancybox  class="various fancybox.iframe">
+                        <img ng-src="http://img.youtube.com/vi/{{pressholder.video}}/hqdefault.jpg" alt="" class="img-responsive">
+                        <span class="get-center youtube-play"><i class="fa fa-youtube-play"></i></span>
+                      </a>
                     </div>
                     <figcaption class="text-uppercase size-big">{{pressholder.name}}</figcaption>
                     <!-- <div class="text-right">{{content.date}}</div> -->
