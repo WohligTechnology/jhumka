@@ -12,23 +12,23 @@
                   <div class="dropdowns">
                     <ul>
                       <li>
-                        <a href="">ABOUT</a>
+                        <a ui-sref="about">ABOUT</a>
                       </li>
                       <li>
-                        <a ng-click="changePage('collection')" class="collection">COLLECTIONS</a>
+                        <a class="collection" ui-serf="presscollection">COLLECTIONS</a>
                         <ul class="sub-menu">
-                          <li><a ng-click="changePage('collection/1')">SYNERGIES</a></li>
-                          <li><a ng-click="changePage('collection/2')">CELESTIAL LOTUS</a></li>
+                          <li><a ui-sref="collection({id:'1'})">SYNERGIES</a></li>
+                          <li><a ui-sref="collection({id:'2'})">CELESTIAL LOTUS</a></li>
                         </ul>
                       </li>
                       <li>
-                        <a href="">PRESS</a>
+                        <a ui-sref="presshome">PRESS</a>
                       </li>
                       <li>
-                        <a href="">STOCKISTS</a>
+                        <a ui-sref="stockists">STOCKISTS</a>
                       </li>
                       <li>
-                        <a href="">CONTACT</a>
+                        <a ui-sref="contact">CONTACT</a>
                       </li>
                     </ul>
                   </div>
@@ -46,10 +46,11 @@
           <div class="social-feed pull-right custom-li">
             <ul>
               <li>
-                <a href=""><img src="img/fb.png" alt="facebook"></a>
+                <a href="https://www.facebook.com/nayajewellery/" target="_blank">
+                  <img src="img/fb.png" alt="facebook"></a>
               </li>
               <li>
-                <a href="">
+                <a href="https://www.instagram.com/nayajewellery/" target="_blank">
                   <img src="img/insta.png" alt="instagram">
                 </a>
               </li>

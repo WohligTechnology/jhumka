@@ -10,19 +10,19 @@
       <div class="home-menu custom-li">
         <ul>
           <li>
-            <a ng-click="changePage('about')">ABOUT</a>
+            <a ui-sref="about">ABOUT</a>
           </li>
           <li>
-            <a ng-click="changePage('collection')">COLLECTIONS</a>
+            <a ui-sref="collectionhome">COLLECTIONS</a>
           </li>
           <li>
-            <a ng-click="changePage('press')">PRESS</a>
+            <a ui-sref="press">PRESS</a>
           </li>
           <li>
-            <a ng-click="changePage('stockists')">STOCKISTS</a>
+            <a ui-sref="stockist">STOCKISTS</a>
           </li>
           <li>
-            <a ng-click="changePage('contact')">CONTACT</a>
+            <a ui-sref="contact">CONTACT</a>
           </li>
         </ul>
       </div>
@@ -103,7 +103,7 @@
         <div class="title-colletcion">
           <h1 class="color-primary text-up text-center">Collections</h1>
         </div>
-        <div class="row" ng-repeat="collection in collections" ui-sref="collection({id:collection.id})">
+        <div class="row" ng-repeat="collection in collections track by $index" ui-sref="collection({id:collection.id})">
           <div class="col-md-offset-4 col-xs-offset-3 col-md-4 col-xs-6">
             <div class="category-title text-center">
               <h1 class="on-hover-show">{{collection.name}}</h1>
@@ -123,7 +123,7 @@
           <h1 class="f20 bold">PRESS</h1>
         </div>
         <div class="row mmt15 pd80">
-          <div class="col-md-4 col-xs-6" ng-repeat="pressitem in press | limitTo:3 ">
+          <div class="col-md-4 col-xs-6" ng-repeat="pressitem in press | limitTo:3 track by $index">
             <a ui-sref="press">
               <div class="press-box position-relative">
                 <div class="img-box">
@@ -162,10 +162,10 @@
               <div class="col-md-offset-1 col-md-10">
                 <div class="select-city">
                   <select class="form-control" ng-model="addressselect"ng-change="getAddress(addressselect)">
-                    <option value="{{cities.city}}" ng-repeat="cities in stockists">{{cities.city}}</option>
+                    <option value="{{cities.city}}" ng-repeat="cities in stockists track by $index">{{cities.city}}</option>
                   </select>
                 </div>
-                <div class="address" ng-repeat="add in address" ng-if="address.length !=0">
+                <div class="address" ng-repeat="add in address track by $index" ng-if="address.length !=0">
                   <div class="address-title mt30 mmt15">
                     <h4 class="f15">{{add.title}}
                 </h4>
@@ -213,26 +213,31 @@
             </div>
           </div>
           <div class="col-md-offset-1 col-md-4 col-sm-7">
-            <div class="contact-form">
-              <form action="" name="contactForm">
-                <div class="form-group" name="contactForm">
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name*" name="name" ng-model="formData.name" required>
-                  <div class="error-msg" ng-show="contactForm.name.$error.required && contactForm.name.$touched">Please Enter Your Name.</div>
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email*" name="email" ng-model="formData.email" required>
-                  <div class="error-msg" ng-show="contactForm.email.$error.required && contactForm.email.$touched">Please Enter Your First Email.</div>
-                </div>
-                <div class="form-group">
-                  <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="Phone" name="phone" ng-model="formData.phone">
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" rows="3" placeholder="Message*" style="resize:none;" name="message" ng-model="formData.message" required></textarea>
-                  <div class="error-msg" ng-show="contactForm.message.$error.required && contactForm.message.$touched">Please Enter Some Message.</div>
-                </div>
-              </form>
-              <div class="pull-right sub">
-                <a href="" class="color-primary" ng-class="{'disabled' : !contactForm.$valid }" ng-click="submitContactForm(contactForm,formData)">SUBMIT</a>
+            <div class="contact-form" >
+          <div ng-hide="thankyouact">
+            <form action="" name="contactForm">
+              <div class="form-group" name="contactForm">
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name*" name="name" ng-model="formData.name" required>
+                <div class="error-msg" ng-show="contactForm.name.$error.required && contactForm.name.$touched">Please Enter Your Name.</div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email*" name="email" ng-model="formData.email" required>
+                <div class="error-msg" ng-show="contactForm.email.$error.required && contactForm.email.$touched">Please Enter Your First Email.</div>
+              </div>
+              <div class="form-group">
+                <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="Phone" name="phone" ng-model="formData.phone">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" rows="3" placeholder="Message*" style="resize:none;" name="message" ng-model="formData.message" required></textarea>
+                <div class="error-msg" ng-show="contactForm.message.$error.required && contactForm.message.$touched">Please Enter Some Message.</div>
+              </div>
+            </form>
+            <div class="pull-right sub">
+              <a href="" class="color-primary" ng-class="{'disabled' : !contactForm.$valid }" ng-click="submitContactForm(contactForm,formData)">SUBMIT</a>
+            </div>
+          </div>
+              <div class="submit-over" ng-show="thankyouact">
+              <h2>Thank You!!</h2>
               </div>
             </div>
           </div>

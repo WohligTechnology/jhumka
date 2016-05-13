@@ -2,9 +2,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
   //Used to name the .html file
+
   $scope.template = TemplateService.changecontent("home");
   $scope.menutitle = NavigationService.makeactive("Home");
   TemplateService.title = $scope.menutitle;
+  $scope.formData={};
   $scope.navigation = NavigationService.getnav();
   $scope.changePage = function(text) {
     var length = $(".fp-section").length;
@@ -62,7 +64,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     console.log(data);
   });
 
-  NavigationService.getAllCollections(function(data) {
+  NavigationService.getAllCollectionscat(function(data) {
     $scope.collections = data;
     console.log(data);
   });
@@ -71,17 +73,30 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     console.log(data);
   });
 
-  $scope.getAddress=function(name){
-    NavigationService.getStockistbycity(name,function(data) {
+  $scope.getAddress = function(name) {
+    NavigationService.getStockistbycity(name, function(data) {
       $scope.address = data;
     });
   };
-  $scope.addressselect="mumbai";
+  $scope.addressselect = "mumbai";
   $scope.getAddress('mumbai');
+  $scope.thankyouact=false;
   $scope.submitContactForm = function(contactForm, formData) {
+    $scope.thankyouact=false;
+
     console.log('form values: ', formData);
     NavigationService.submitContact(formData, function(data) {
       console.log(data);
+      $scope.thankyouact=true;
+      $timeout(function(){
+        $scope.thankyouact=false;
+        $scope.formData={};
+        console.log($scope.formData);
+        contactForm.name.$touched=false;
+        contactForm.email.$touched=false;
+        contactForm.phone.$touched=false;
+        contactForm.message.$touched=false;
+      },1000);
     });
   };
 })
@@ -115,6 +130,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     console.log($stateParams);
     NavigationService.getOneCollections($stateParams.id, function(data) {
       $scope.collectionsitems = data;
+      console.log(data);
+    });
+    console.log($stateParams);
+    NavigationService.getAllCollectionscatbyid($stateParams.id, function(data) {
+      $scope.collectionselected = data;
     });
   })
   .controller('PressCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -128,51 +148,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       $scope.press = data;
       console.log(data);
     });
-
-
-    //
-    // $scope.press = [{
-    //   img: "img/p4.jpg",
-    //   caption: "Self rediges unveils",
-    //   link: "img/p4.jpg",
-    //   date: "29/01/16"
-    // }, {
-    //   img: "img/p5.jpg",
-    //   caption: "Self rediges unveils",
-    //   link: "http://www.youtube.com/embed/L9szn1QQfas?autoplay=1",
-    //   isIframe: true,
-    //   date: "29/01/16"
-    // }, {
-    //   img: "img/p4.jpg",
-    //   caption: "Self rediges unveils",
-    //   link: "img/p4.jpg",
-    //   date: "29/01/16"
-    // }, {
-    //   img: "img/p4.jpg",
-    //   caption: "Self rediges unveils",
-    //   link: "img/p4.jpg",
-    //   date: "29/01/16"
-    // }, {
-    //   img: "img/p4.jpg",
-    //   caption: "Self rediges unveils",
-    //   link: "img/p4.jpg",
-    //   date: "29/01/16"
-    // }, {
-    //   img: "img/p4.jpg",
-    //   caption: "Self rediges unveils",
-    //   link: "img/p4.jpg",
-    //   date: "29/01/16"
-    // }, {
-    //   img: "img/p5.jpg",
-    //   caption: "Self rediges unveils",
-    //   link: "http://www.youtube.com/embed/L9szn1QQfas?autoplay=1",
-    //   date: "29/01/16"
-    // }, {
-    //   img: "img/p5.jpg",
-    //   caption: "Self rediges unveils",
-    //   link: "http://www.youtube.com/embed/L9szn1QQfas?autoplay=1",
-    //   date: "29/01/16"
-    // }];
   })
 
 .controller('headerctrl', function($scope, TemplateService) {

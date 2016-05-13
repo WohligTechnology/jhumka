@@ -1,5 +1,5 @@
-var adminURL = "http://192.168.1.110/nayabackend/index.php/";
-var imgurl = "http://192.168.1.110/nayabackend/uploads/";
+var adminURL = "http://wohlig.co.in/nayabackend/index.php/";
+var imgurl = "http://wohlig.co.in/nayabackend/uploads/";
 // if(isproduction)
 // {
 //   adminURL =  "http://www.wohlig.co.in/demo/index.php";
@@ -37,12 +37,16 @@ var navigationservice = angular.module('navigationservice', [])
       return menuname;
     },
 
-    getAllCollections: function(callback) {
+    getAllCollectionscat: function(callback) {
       $http({
-        url: adminURL + "json/getcollections",
+        url: adminURL + "json/getcollectionscat",
         mehod: 'POST',
         data: {}
       }).success(callback)
+    },
+
+    getAllCollectionscatbyid: function(id,callback) {
+      $http.get(adminURL + "json/getcollectionscat?id=" + id).success(callback);
     },
 
     getAllSiders: function(callback) {
