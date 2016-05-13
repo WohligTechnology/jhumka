@@ -67,6 +67,10 @@ var navigationservice = angular.module('navigationservice', [])
         data: {}
       }).success(callback)
     },
+    getStockistbycity: function(name,callback) {
+      $http.get(adminURL + "json/getstockist?name=" + name).success(callback);
+
+    },
     submitContact: function(formData, callback) {
       console.log(formData);
       $http({

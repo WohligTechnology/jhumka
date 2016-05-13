@@ -161,41 +161,21 @@
             <div class="row">
               <div class="col-md-offset-1 col-md-10">
                 <div class="select-city">
-                  <select class="form-control">
-                    <option value="{{cities.value}}" ng-repeat="stockists in cities">{{cities.value}}</option>
+                  <select class="form-control" ng-model="addressselect"ng-change="getAddress(addressselect)">
+                    <option value="{{cities.city}}" ng-repeat="cities in stockists">{{cities.city}}</option>
                   </select>
                 </div>
-                <div class="address">
+                <div class="address" ng-repeat="add in address" ng-if="address.length !=0">
                   <div class="address-title mt30 mmt15">
-                    <h4 class="f15">German Consulate General
+                    <h4 class="f15">{{add.title}}
                 </h4>
                   </div>
                   <div class="address-detail">
-                    <p>Hoechst House, 10th Floor,</p>
-                    <p>193 Backbay Reclamation, Nariman Point,</p>
-                    <p>Tel: <a href="tel:+912222832422">+91 22 2283 2422</a> / <a href="tel:+912222832517">2283 2517</a></p>
-                    <p>Fax: +91 22 2202 5493,</p>
+                    <div ng-bind-html="add.address"></div>
+                    <p>Tel: {{add.phone}}</p>
+                    <p>Fax: {{add.fax}}</p>
                   </div>
-                  <div class="address-title mt30 mmt15">
-                    <h4 class="f15">German Consulate General
-                </h4>
-                  </div>
-                  <div class="address-detail">
-                    <p>Hoechst House, 10th Floor,</p>
-                    <p>193 Backbay Reclamation, Nariman Point,</p>
-                    <p>Tel: <a href="tel:+912222832422">+91 22 2283 2422</a> / <a href="tel:+912222832517">2283 2517</a></p>
-                    <p>Fax: +91 22 2202 5493,</p>
-                  </div>
-                  <div class="address-title mt30 mmt15">
-                    <h4 class="f15">German Consulate General
-                </h4>
-                  </div>
-                  <div class="address-detail">
-                    <p>Hoechst House, 10th Floor,</p>
-                    <p>193 Backbay Reclamation, Nariman Point,</p>
-                    <p>Tel: <a href="tel:+912222832422">+91 22 2283 2422</a> / <a href="tel:+912222832517">2283 2517</a></p>
-                    <p>Fax: +91 22 2202 5493,</p>
-                  </div>
+
                 </div>
               </div>
             </div>

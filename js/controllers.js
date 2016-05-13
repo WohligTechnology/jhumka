@@ -71,6 +71,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     console.log(data);
   });
 
+  $scope.getAddress=function(name){
+    NavigationService.getStockistbycity(name,function(data) {
+      $scope.address = data;
+    });
+  };
+  $scope.addressselect="mumbai";
+  $scope.getAddress('mumbai');
   $scope.submitContactForm = function(contactForm, formData) {
     console.log('form values: ', formData);
     NavigationService.submitContact(formData, function(data) {
