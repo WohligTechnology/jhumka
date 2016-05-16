@@ -271,6 +271,10 @@ a {
   @include position(absolute, 50% null null 50%);
   @include transform (translatex(-50%) translatey(-50%));
   z-index: 9;
+  .seeall {
+    margin-top: 18px;
+    padding-right: 70px;
+  }
 }
 .position-relative {
   position: relative;
@@ -292,8 +296,7 @@ a {
         color: $base-color;
         @include transition(all ease 500ms);
         &:hover {
-          color: darken($base-color, 50%);
-          font-weight: 600;
+          font-weight: 700;
         }
       }
     }
@@ -447,6 +450,11 @@ a {
 }
 .contact-detail {
   padding-bottom: 30px;
+  a:hover {
+    p {
+      color: darken($brand-primary, 10%);
+    }
+  }
   p {
     color: $brand-primary;
     line-height: 80%;
@@ -557,10 +565,14 @@ a {
     opacity: 0;
     position: relative;
     @include transition(all 300ms ease);
+    width: 30px;
+    height: 30px;
     i {
       font-size: 16px;
       padding-top: 8px;
       position: absolute;
+      top: 0;
+      right: 0;
       width: 100%;
       text-align: center;
       @include transition(all ease 300ms);
@@ -658,7 +670,7 @@ footer {
   position: relative;
   cursor: pointer;
   padding: 12px 0 17px;
-  &:hover {
+  &.showmenu {
     .dropdowns {
       display: block;
     }
@@ -863,5 +875,8 @@ ol.flex-control-nav.flex-control-paging {
   color: #000;
   font-size: 40px;
   font-weight: 700;
+}
+.mar-top {
+  margin-top: 30px;
 }
 @import "mobile";

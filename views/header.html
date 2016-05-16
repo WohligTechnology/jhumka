@@ -12,7 +12,7 @@
               </button> -->
             <div class="menu-hover custom-li">
               <ul class="padding0">
-                <li class="scond">
+                <li class="scond" ng-click="toggle = !toggle" ng-class="{'showmenu' : toggle}">
                   <img src="img/menu.png" alt="logo" width="30">
                   <div class="dropdowns">
                     <ul>
@@ -27,7 +27,7 @@
                         </ul>
                       </li>
                       <li>
-                        <a ui-sref="press" class="press">PRESS</a>
+                        <a ui-sref="presshome" class="press">PRESS</a>
                       </li>
                       <li>
                         <a ui-sref="stockists" class="stockists">STOCKISTS</a>

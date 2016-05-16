@@ -6,7 +6,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.template = TemplateService.changecontent("home");
   $scope.menutitle = NavigationService.makeactive("Home");
   TemplateService.title = $scope.menutitle;
-  $scope.formData={};
+  $scope.formData = {};
   $scope.navigation = NavigationService.getnav();
   $scope.changePage = function(text) {
     var length = $(".fp-section").length;
@@ -80,23 +80,23 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   };
   $scope.addressselect = "mumbai";
   $scope.getAddress('mumbai');
-  $scope.thankyouact=false;
+  $scope.thankyouact = false;
   $scope.submitContactForm = function(contactForm, formData) {
-    $scope.thankyouact=false;
+    $scope.thankyouact = false;
 
     console.log('form values: ', formData);
     NavigationService.submitContact(formData, function(data) {
       console.log(data);
-      $scope.thankyouact=true;
-      $timeout(function(){
-        $scope.thankyouact=false;
-        $scope.formData={};
+      $scope.thankyouact = true;
+      $timeout(function() {
+        $scope.thankyouact = false;
+        $scope.formData = {};
         console.log($scope.formData);
-        contactForm.name.$touched=false;
-        contactForm.email.$touched=false;
-        contactForm.phone.$touched=false;
-        contactForm.message.$touched=false;
-      },1000);
+        contactForm.name.$touched = false;
+        contactForm.email.$touched = false;
+        contactForm.phone.$touched = false;
+        contactForm.message.$touched = false;
+      }, 1000);
     });
   };
 })

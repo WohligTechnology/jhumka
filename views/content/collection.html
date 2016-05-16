@@ -18,7 +18,7 @@
         <div class="col-md-offset-1 col-md-10">
           <div class="row">
             <div class="col-md-4 col-sm-6" ng-repeat="collectionsitem in collectionsitems track by $index">
-              <div class="collection-box collection-ht">
+              <div class="collection-box collection-ht" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
                 <div class="hover-desc" ng-class="{active: hover}">
                   <span ng-bind-html="collectionsitem.description">
                 </span>
@@ -59,7 +59,7 @@
                   </div>
                 </div>
 
-                <div class="hover-txt pull-left pad10" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+                <!-- <div class="hover-txt pull-left pad10" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="18px" viewBox="0 0 104.028 72.463" enable-background="new 0 0 104.028 72.463" xml:space="preserve">
                     <g>
                       <defs>
@@ -267,11 +267,7 @@
                 		C43.362,13.119,45.153,14.91,45.153,17.119" />
                     </g>
                   </svg>
-                  <!-- <img src="img/mini-icon.png" alt="mini-icon"> -->
-                  <!-- <div class="hover-icon">
-            <i class="fa fa-facebook"></i>
-          </div> -->
-                </div>
+                </div> -->
                 <a fancyBox href="{{collectionsitem.image|serverimage}}" class="fancybox-button" rel="fancybox-button" title=" &nbsp;">
                   <div class="coll-img-box">
                     <img ng-src="{{collectionsitem.image|serverimage}}" alt="" class="img-responsive">
