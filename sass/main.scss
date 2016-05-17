@@ -741,7 +741,7 @@ img.fancybox-image {
   }
   &.top {
     top: auto;
-    bottom: 20px;
+    bottom: 0;
     width: 98.7%;
   }
   a.btnToggle {
@@ -818,11 +818,16 @@ img.fancybox-image {
 ol.flex-control-nav.flex-control-paging {
   // display: none;
 }
-.fancybox-title {
+// .fancybox-title {
+//   position: absolute;
+//   top: 0;
+//   left: 30px;
+//   width: 70px;
+// }
+.collection-detail.inside {
   position: absolute;
-  top: 0;
-  left: 30px;
-  width: 70px;
+  bottom: 20px;
+  left: 20px;
 }
 .icon-image {
   cursor: pointer;
@@ -878,5 +883,12 @@ ol.flex-control-nav.flex-control-paging {
 }
 .mar-top {
   margin-top: 30px;
+}
+.fancybox-title-inside-wrap {
+  padding-top: 0;
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  width: 90%;
 }
 @import "mobile";

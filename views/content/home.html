@@ -129,7 +129,7 @@
           <h1 class="f20 bold">PRESS</h1>
         </div>
         <div class="row mmt15 pd80">
-          <div class="col-md-4 col-xs-6" ng-repeat="pressitem in press track by $index | limitTo:3 ">
+          <div class="col-sm-4 col-xs-6" ng-repeat="pressitem in press track by $index | limitTo:3 ">
             <a fancyBox href="{{pressitem.image|serverimage}}" class="fancybox-button" rel="fancybox-button">
               <div class="press-box position-relative">
                 <div class="img-box">
@@ -166,7 +166,7 @@
             </div>
             <div class="row">
               <div class="col-md-offset-1 col-md-10">
-                <div class="select-city">
+                <div class="select-city select_style">
                   <select class="form-control" ng-model="addressselect" ng-change="getAddress(addressselect)">
                     <option value="{{cities.city}}" ng-repeat="cities in stockists track by $index">{{cities.city}}</option>
                   </select>
