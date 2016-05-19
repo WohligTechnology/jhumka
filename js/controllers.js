@@ -107,7 +107,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
-
+    if (typeof $.fn.fullpage.destroy == 'function') {
+      $.fn.fullpage.destroy('all');
+    }
     // $scope.collection = [{
     //   img: "img/c1.jpg",
     //   desc: "The Lotus is very symbolic and important element in the Chakra’s. "
@@ -148,6 +150,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       $scope.press = data;
       console.log(data);
     });
+    if (typeof $.fn.fullpage.destroy == 'function') {
+      $.fn.fullpage.destroy('all');
+    }
   })
 
 .controller('headerctrl', function($scope, TemplateService) {

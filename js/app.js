@@ -163,16 +163,16 @@ firstapp.directive('fancybox', function($document) {
           if (this.title) {
           }
         },
-        afterShow: function() {
-          var temp = this.title;
-          this.title = '';
-          this.title += '<div class="collection-detail inside"><p class="color-primary">'+temp+'</p></div>';
-        },
-        beforeShow: function() {
-          var temp = this.title;
-          this.title = '';
-          this.title += '<div class="collection-detail inside"><p class="color-primary">'+temp+'</p></div>';
-        },
+        // afterShow: function() {
+        //   var temp = this.title;
+        //   this.title = '';
+        //   this.title += '<div class="collection-detail inside"><p class="color-primary">'+temp+'</p></div>';
+        // },
+        // beforeShow: function() {
+        //   var temp = this.title;
+        //   this.title = '';
+        //   this.title += '<div class="collection-detail inside"><p class="color-primary">'+temp+'</p></div>';
+        // },
         // afterClose: function() {
         //   $(document).fullScreen(false);
         // },
