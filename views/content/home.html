@@ -9,21 +9,20 @@
       </flex-slider>
       <div class="home-menu custom-li">
         <ul>
-
           <li>
-            <a ui-sref="about">ABOUT</a>
+            <a ng-click="changePage('about')" class="about">ABOUT</a>
           </li>
           <li>
-            <a ui-sref="collectionhome">COLLECTIONS</a>
+            <a ng-click="changePage('collection')" class="collection">COLLECTIONS</a>
           </li>
           <li>
-            <a ui-sref="presshome">PRESS</a>
+            <a ng-click="changePage('press')" class="press">PRESS</a>
           </li>
           <li>
-            <a ui-sref="stockist">STOCKISTS</a>
+            <a ng-click="changePage('stockists')" class="stockists">STOCKISTS</a>
           </li>
           <li>
-            <a ui-sref="contact">CONTACT</a>
+            <a ng-click="changePage('contact')" class="contact">CONTACT</a>
           </li>
         </ul>
       </div>
@@ -224,13 +223,13 @@
             <div class="contact-form">
               <div ng-hide="thankyouact">
                 <form action="" name="contactForm">
-                  <div class="form-group" name="contactForm">
+                  <div class="form-group">
                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name*" name="name" ng-model="formData.name" required>
                     <div class="error-msg" ng-show="contactForm.name.$error.required && contactForm.name.$touched">Please Enter Your Name.</div>
                   </div>
                   <div class="form-group">
                     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email*" name="email" ng-model="formData.email" required>
-                    <div class="error-msg" ng-show="contactForm.email.$error.required && contactForm.email.$touched">Please Enter Your First Email.</div>
+                    <div class="error-msg" ng-show="contactForm.email.$error.required && contactForm.email.$touched">Please Enter Your Email.</div>
                   </div>
                   <div class="form-group">
                     <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="Phone" name="phone" ng-model="formData.phone">

@@ -17,30 +17,30 @@
                   <div class="dropdowns">
                     <ul>
                       <li>
-                        <a ui-sref="about" class="about">ABOUT</a>
+                        <a ng-click="changePage('about')" class="about">ABOUT</a>
                       </li>
                       <li>
-                        <a ui-sref="collectionhome" class="collection">COLLECTIONS</a>
+                        <a ng-click="changePage('collection')" class="collection">COLLECTIONS</a>
                         <ul class="sub-menu">
                           <li><a ui-sref="collection({id:'1'})">SYNERGIES</a></li>
                           <li><a ui-sref="collection({id:'2'})">CELESTIAL LOTUS</a></li>
                         </ul>
                       </li>
                       <li>
-                        <a ui-sref="presshome" class="press">PRESS</a>
+                        <a ng-click="changePage('press')"  class="press">PRESS</a>
                       </li>
                       <li>
-                        <a ui-sref="stockists" class="stockists">STOCKISTS</a>
+                        <a ng-click="changePage('stockists')"  class="stockists">STOCKISTS</a>
                       </li>
                       <li>
-                        <a ui-sref="contact" class="contact">CONTACT</a>
+                        <a ng-click="changePage('contact')" class="contact">CONTACT</a>
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li class="ml12">
                   <div class="naya-logo">
-                    <a class="navbar-brand" ui-sref="home"> <img src="img/naya-logo.png" alt="logo" class="pl20"> </a>
+                    <a class="navbar-brand" ng-click="changePage('home')"> <img src="img/naya-logo.png" alt="logo" class="ml20"> </a>
                   </div>
                 </li>
               </ul>
@@ -60,11 +60,6 @@
                   <img src="img/insta.png" alt="instagram">
                 </a>
               </li>
-              <li>
-                <a href="">
-                  <img src="img/pinterest.png" alt="Pinterest">
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -80,16 +75,16 @@
             <g id="XMLID_211_">
               <g id="XMLID_277_">
                 <g id="XMLID_279_">
-                  <a ui-sref="stockists" class="stockists">
+                  <a ng-click="changePage('stockists')" class="stockists">
                     <path id="XMLID_281_" fill="#e0b4a7" d="M373.708,361.525c29.195,22.983,70.814,39.755,130.447,42.24
                 c0,0,0.621-175.172-182.626-190.701C337.059,231.699,378.678,288.226,373.708,361.525z" />
                   </a>
-                  <a ui-sref="collectionhome" class="collection">
+                  <a ng-click="changePage('collection')" class="collection">
                     <path id="XMLID_280_" fill="#e0b4a7" d="M237.67,362.146c-29.195,22.362-70.814,39.134-129.826,41.619
                 c0,0-0.621-179.52,190.08-191.322C255.685,260.273,235.186,310.588,237.67,362.146L237.67,362.146z" />
                   </a>
                 </g>
-                <a ui-sref="presshome" class="press">
+                <a ng-click="changePage('press')" class="press">
                   <path id="XMLID_278_" fill="#e0b4a7" d="M309.105,211.821c-141.007,153.431-4.348,275.802-4.348,275.802
               C440.174,341.647,309.105,211.821,309.105,211.821z" />
                 </a>
@@ -100,7 +95,7 @@
               c0-137.901,112.433-250.333,250.334-250.333s250.334,112.433,250.334,250.333c0,2.485,1.863,4.349,4.349,4.349
               C563.167,424.885,565.03,423.021,565.03,421.157z" />
               </g>
-              <a ui-sref="contact" class="contact">
+              <a ng-click="changePage('contact')" class="contact">
                 <path id="XMLID_274_" fill="#e0b4a7" d="M258.169,713.731C274.941,746.033,293.577,773.986,306,792
             c12.424-18.014,31.059-45.967,47.831-78.269C341.407,657.205,320.908,579.558,306,522.409
             C291.092,579.558,270.593,657.826,258.169,713.731z" />
@@ -109,7 +104,7 @@
                 <circle id="XMLID_273_" fill="#e0b4a7" cx="51.318" cy="477.063" r="23.604" />
                 <circle id="XMLID_272_" fill="#e0b4a7" cx="560.683" cy="477.063" r="23.604" />
               </g>
-              <a ui-sref="about" class="about">
+              <a ng-click="changePage('about')" class="about">
                 <polygon id="XMLID_270_" fill="#e0b4a7" points="274.941,54.042 243.261,108.706 306,108.706 368.739,108.706 337.68,54.042 306,0" />
               </a>
               <g id="XMLID_212_">

@@ -178,7 +178,7 @@ firstapp.directive('fancybox', function($document) {
         // },
         maxWidth: 800,
         maxHeight: 600,
-        fitToView: false,
+        fitToView: true,
         width: '70%',
         height: '70%',
         autoSize: false,

@@ -9,12 +9,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.formData = {};
   $scope.navigation = NavigationService.getnav();
   $scope.changePage = function(text) {
+    console.log(text);
     var length = $(".fp-section").length;
     console.log(length);
     console.log($(".fp-section"));
-    if (typeof $.fn.fullpage.destroy == 'function') {
-      $.fn.fullpage.destroy('all');
-    }
+    // if (typeof $.fn.fullpage.destroy == 'function') {
+    //   $.fn.fullpage.destroy('all');
+    // }
     if (length === 0) {
       $('.fullpage').fullpage();
     }
@@ -107,6 +108,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
+    TemplateService.footer = "";
     if (typeof $.fn.fullpage.destroy == 'function') {
       $.fn.fullpage.destroy('all');
     }
