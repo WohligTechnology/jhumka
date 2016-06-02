@@ -580,13 +580,14 @@ a {
       text-align: center;
       @include transition(all ease 300ms);
       &:hover {
-        color: lighten(#000, 50%) important;
+        color: lighten(#000, 50%) !important;
       }
     }
     span {
       opacity: 0;
-      width: 10px;
+      width: 35px;
       height: 25px;
+      display:block;
     }
   }
   .click {
@@ -596,12 +597,12 @@ a {
     &:hover {
       .fb-hover {
         opacity: 1;
-        i {
-          color: #333 !important;
-          &:focus {
-            color: #333 !important;
-          }
-        }
+        // i {
+        //   color: #333 !important;
+        //   &:focus {
+        //     color: #333 !important;
+        //   }
+        // }
       }
       .grey-col {
         fill: #cacaca;
@@ -926,5 +927,15 @@ ol.flex-control-nav.flex-control-paging {
     background: none;
     color: #cacaca;
   }
+}
+.scrolldownflower {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%,-50%));
+  z-index: 9999999;
+}
+.contain-mid img {
+  width: 125px;
 }
 @import "mobile";
