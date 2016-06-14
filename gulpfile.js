@@ -14,7 +14,6 @@ var jsArray = [
   './bower_components/angular-bootstrap/ui-bootstrap.min.js',
   './bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
   './bower_components/lodash/lodash.js',
-  './js/widget.js',
   './js/app.js',
   './js/controllers.js',
   './js/templateservice.js',
