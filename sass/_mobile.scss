@@ -66,8 +66,12 @@
   .width80 {
     width: 80%;
   }
+  .width90 {
+    width: 90%;
+    margin-top: 30px;
+  }
   .image-menu {
-    left: 10px;
+    display: none;
   }
   .home-menu ul li {
     padding: 0 7px;
@@ -78,6 +82,17 @@
   .submit-over h2 {
     width: 100%;
     text-align: center;
+  }
+  .contact-detail {
+    padding-left: 0;
+    padding-bottom: 10px;
+    min-height: auto;
+    p {
+      line-height: 100%;
+      margin: 0;
+      font-size: 13px;
+      text-align: justify;
+    }
   }
 }
 @media (max-width: 480px) {
@@ -103,14 +118,6 @@
   }
   .pl20 {
     padding-left: 0;
-  }
-  .image-menu {
-    left: 10px;
-    top: 40px;
-    svg:not(:root) {
-      overflow: hidden;
-      width: 60px;
-    }
   }
   .home-menu {
     bottom: 45px;
@@ -187,7 +194,7 @@
     margin-top: 15px;
   }
   .mmt10 {
-    margin-top: 0px;
+    margin-top: 0;
   }
   .select-city .form-control {
     height: 40px;
@@ -202,11 +209,6 @@
     font-size: 15px;
   }
   .f13 {
-    font-size: 13px;
-    text-align: justify;
-  }
-  .contact-detail p {
-    line-height: 60%;
     font-size: 13px;
     text-align: justify;
   }
@@ -226,6 +228,12 @@
   }
   .contact-detail {
     padding-bottom: 5px;
+    p {
+      line-height: 100%;
+      margin: 0;
+      font-size: 13px;
+      text-align: justify;
+    }
   }
   .pd80 {
     padding: 0;

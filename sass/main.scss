@@ -200,7 +200,10 @@ a {
     margin-bottom: 0;
     li {
       display: inline-block;
-      // padding: 0 8px;
+      @include transition(all ease 300ms);
+      &:hover img {
+        opacity: 0.6;
+      }
     }
   }
 }
@@ -409,6 +412,9 @@ a {
 }
 .address {
   padding-left: 30px;
+  a {
+    color: $base-color;
+  }
 }
 .address-detail {
   p {
@@ -453,6 +459,8 @@ a {
 }
 .contact-detail {
   padding-bottom: 30px;
+  padding-left: 30px;
+  min-height: 230px;
   a:hover {
     p {
       color: darken($brand-primary, 10%);
@@ -505,7 +513,7 @@ a {
   // position: absolute;
   // top: 0;
   img {
-    width: 60%;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -516,12 +524,15 @@ a {
   text-transform: uppercase;
 }
 .collection-ht {
-  height: 275px;
+  height: 317px;
 }
 .collection-box {
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
+  background: #cdcdcd;
+  border-style: groove;
+  border-width: 0.5px 0.5px 0.5px 0.5px;
   svg:hover {
     color: #000;
   }
@@ -532,14 +543,13 @@ a {
 }
 .hover-desc {
   position: absolute;
-  background: #e0e0e0;
-  padding: 10px 26px;
-  font-family: 'Rajdhani';
-  font-weight: 500;
-  color: #4d4d4d;
-  display: block;
   bottom: 0;
-  left: 0;
+  background: rgba(0,0,0,.63);
+  color: #fff;
+  padding: 6px 10px 0;
+  font-family: ColabThi,avia,Rajdhani,sans-seri;
+  line-height: 125%;
+  font-size: 18px;
   width: 100%;
 }
 .pad10 {
@@ -587,7 +597,7 @@ a {
       opacity: 0;
       width: 35px;
       height: 25px;
-      display:block;
+      display: block;
     }
   }
   .click {
@@ -875,16 +885,7 @@ ol.flex-control-nav.flex-control-paging {
   }
 }
 .min-hght {
-  min-height: 650px;
-}
-.submit-over h2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  color: #000;
-  font-size: 40px;
-  font-weight: 700;
+  min-height: 980px;
 }
 .mar-top {
   margin-top: 30px;
@@ -937,5 +938,126 @@ ol.flex-control-nav.flex-control-paging {
 }
 .contain-mid img {
   width: 125px;
+}
+@-webkit-keyframes chevron-pulse {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes chevron-pulse {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.tcon-svgchevron {
+  height: 40px;
+  width: 40px;
+}
+.tcon-svgchevron path {
+  -webkit-animation: chevron-pulse 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  animation: chevron-pulse 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
+  stroke: black;
+  stroke-width: 1px;
+}
+.tcon-svgchevron path.a1 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.tcon-svgchevron path.a2 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+.tcon-svgchevron path.a3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+.contact-form {
+  height: 300px;
+  position: relative;
+}
+.submit-over {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  @include transform(translate(-50%,-50%));
+  h2 {
+    margin: 0;
+    font-size: 40px;
+    text-align: center;
+    color: $base-color;
+  }
+}
+@-webkit-keyframes chevron-pulse {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes chevron-pulse {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.tcon-svgchevron {
+  height: 40px;
+  width: 40px;
+}
+.tcon-svgchevron path {
+  -webkit-animation: chevron-pulse 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  animation: chevron-pulse 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
+  stroke: black;
+  stroke-width: 1px;
+}
+.tcon-svgchevron path.a1 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.tcon-svgchevron path.a2 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+.tcon-svgchevron path.a3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+.down-arrow{
+  cursor: pointer;
 }
 @import "mobile";

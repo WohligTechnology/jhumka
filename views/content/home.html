@@ -184,33 +184,34 @@
       </div>
     </div>
   </section>
-  <section class="section naya-section position-relative" id="naya" auto-height>
+  <section class="section naya-section position-relative" id=naya auto-height="">
     <div class="slider-mid width80">
-      <div class="container">
-        <div class="row">
+      <div class=container>
+        <div class=row>
           <div class="col-md-offset-1 col-md-10 col-xs-12">
-            <div class="naya-content">
+            <div class=naya-content>
               <div class="naya-title text-center">
-                <h2 class="color-base f20 bold">NAYA</h2>
-              </div>
+                <h2 class="color-base f20 bold">NAYA</h2></div>
               <div class="naya-detail color-base mt30 mt0 text-justify">
                 <p>The brand Naya, which is Hindi for New, has its roots in tradition. Naya revives elements of Indian philosophies that have been diluted or lost over time, reintroducing these elements in a contemporary way and expressing them through fine
                   jewellery.
                 </p>
-                <p>Naya’s first endeavour is subdivided into two collections, both inspired by the gateways of life force and energy- The Chakras.
-                </p>
-                <p>
-                  Celestial Lotus – The Lotus is an important symbolic element in the Chakras. It is often used to visualise each Chakra and represents cosmic harmony and consciousness. The collection translates the visual language of the Lotus symbolizing it in contemporary
-                  and geometric forms. A juxtaposition of edgy detailing with delicate forms in a palette that flows from red rubies, pink tourmalines, pleochroic tanzanites and black diamonds and pearls.
-                </p>
-                <p>
-                  Synergies – A Chakra is the platform in which energies blend and synergize. Energy is always in motion, interweaving and interconnecting. This collection is about activating multiple Chakras by using complementary stones and pieces of jewellery creating
-                  a symbiosis that a single Chakra could not easily reach. The movement or transition of these energies inspired the Synergies collection. A convergence of feminine forms and fluid construction in a monochromatic palette with pops of colour.
-                </p>
+                <p>Naya’s first endeavour is subdivided into two collections, both inspired by the gateways of life force and energy- The Chakras.</p>
+                <p>Celestial Lotus – The Lotus is an important symbolic element in the Chakras. It is often used to visualise each Chakra and represents cosmic harmony and consciousness. The collection translates the visual language of the Lotus symbolizing
+                  it in contemporary and geometric forms. A juxtaposition of edgy detailing with delicate forms in a palette that flows from red rubies, pink tourmalines, pleochroic tanzanites and black diamonds and pearls.</p>
+                <p>Synergies – A Chakra is the platform in which energies blend and synergize. Energy is always in motion, interweaving and interconnecting. This collection is about activating multiple Chakras by using complementary stones and pieces of
+                  jewellery creating a symbiosis that a single Chakra could not easily reach. The movement or transition of these energies inspired the Synergies collection. A convergence of feminine forms and fluid construction in a monochromatic palette
+                  with pops of colour.</p>
               </div>
             </div>
           </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <div class="naya-title text-center" ng-click="changePage('ananya')">
+          <h2 class="color-base f20 bold down-arrow"><span class="tcon-indicator" aria-label="scroll" aria-hidden="true"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="tcon-svgchevron" viewBox="0 0 30 36"><path class="a3" d="M0,0l15,16L30,0"></path><path class="a2" d="M0,10l15,16l15-16"></path>
+            <path class="a1" d="M0,20l15,16l15-16"></path></svg></span></h2> </div>
       </div>
     </div>
   </section>
@@ -327,16 +328,16 @@
                   </select>
                 </div>
                 <div class="address" ng-repeat="add in address track by $index" ng-if="address.length !=0">
-                  <div class="address-title mt30 mmt15">
-                    <h4 class="f15">{{add.title}}
-                </h4>
-                  </div>
-                  <div class="address-detail">
-                    <div ng-bind-html="add.address"></div>
-                    <p>Tel: {{add.phone}}</p>
-                    <p>Fax: {{add.fax}}</p>
-                  </div>
-
+                  <a href="{{add.link}}" target="_blank">
+                    <div class="address-title mt30 mmt15">
+                      <h4 class="f15">{{add.title}}</h4>
+                    </div>
+                    <div class="address-detail">
+                      <div ng-bind-html="add.address"></div>
+                      <p ng-if="add.phone !== undefined && add.phone !== null && add.phone !==  ''">Tel: {{add.phone}}</p>
+                      <p ng-if="add.fax !== undefined && add.fax !== null && add.fax !==  ''">Fax: {{add.fax}}</p>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -347,7 +348,7 @@
     </div>
   </section>
   <section class="section  category-section position-relative" auto-height>
-    <div class="slider-mid width80">
+    <div class="slider-mid width90">
       <div class="container">
         <div class="row mmt40">
           <div class="col-md-offset-1 col-md-4">
@@ -357,52 +358,69 @@
           </div>
         </div>
         <div class="row mt30 mmt10">
-          <div class="col-md-offset-1 col-md-4 col-sm-5 border-right">
+          <div class="col-md-3 col-sm-5 col-xs-6 border-right">
             <div class="contact-detail">
-              <a href="https://www.google.co.in/maps" target="_blank">
-                <p>#.71, Meher Building,Shivaji Park,</p>
-                <p>Ranade Road,Dadar West, Mumbai,
-                </p>
-                <p>Maharashtra 400028
-                </p>
+              <a href="https://www.google.com/mapmaker?gw=55&editids=YTL2-ZqnKlwqdNwxYT&iwloc=0_0" target="_blank">
+                <p>Chennai office :</p>
+                <p>#.30, Khader Nawaz Khan Road,</p>
+                <p>Nungambakkam, </p>
+                <p>Chennai – 600006.</p>
               </a>
-              <div class="num">
-                <a href="tel:+912222832422" class="color-primary f16 f13"> +91 22 2445 5034
-              </a>
-              </div>
-              <div class="email">
-                <a href="mailto:info@naya.com" class="color-primary f16 f13">info@naya.com</a>
-              </div>
+              <div class="num"><a href="tel:+912224455034" class="color-primary f16 f13">+91 22 2445 5034</a></div>
+              <div class="email"><a href="mailto:info@naya.com" class="color-primary f16 f13">info@naya.com</a></div>
             </div>
           </div>
-          <div class="col-md-offset-1 col-md-4 col-sm-7">
+          <div class="col-md-3 col-sm-5 col-xs-6 border-right">
+            <div class="contact-detail">
+              <a href="https://www.google.com/mapmaker?gw=55&editids=r0DFt4RDljdMUBIN8u&iwloc=0_0" target="_blank">
+                <p>New Delhi office :</p>
+                <p>The Kila, Seven Style Mile,</p>
+                <p>Mehrauli,</p>
+                <p>New Delhi-110 030.</p>
+              </a>
+              <div class="num"><a href="tel:+912224455034" class="color-primary f16 f13">+91 22 2445 5034</a></div>
+              <div class="email"><a href="mailto:info@naya.com" class="color-primary f16 f13">info@naya.com</a></div>
+            </div>
+          </div>
+          <div class=" col-md-3 col-sm-5 col-xs-12 border-right">
+            <div class="contact-detail">
+              <a href="https://www.google.com/mapmaker?gw=55&editids=kb3d2SFjsWgx1tS_Ih&iwloc=0_0" target="_blank">
+                <p>Bangalore office :</p>
+                <p>#.14, Vittal Mallya Road,</p>
+                <p>Embassy Classic,</p>
+                <p>Bangalore-560 001.</p>
+              </a>
+              <div class="num"><a href="tel:+912224455034" class="color-primary f16 f13">+91 22 2445 5034</a></div>
+              <div class="email"><a href="mailto:info@naya.com" class="color-primary f16 f13">info@naya.com</a></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-7 col-xs-12">
             <div class="contact-form">
-              <div ng-hide="thankyouact">
-                <form action="" name="contactForm">
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name*" name="name" ng-model="formData.name" required>
-                    <div class="error-msg" ng-show="contactForm.name.$error.required && contactForm.name.$touched">Please Enter Your Name.</div>
+              <div ng-hide=thankyouact>
+                <form name=contactForm>
+                  <div class=form-group>
+                    <input type=text class=form-control id=exampleInputEmail1 placeholder=Name* name=name ng-model=formData.name required="">
+                    <div class=error-msg ng-show="contactForm.name.$error.required && contactForm.name.$touched">Please Enter Your Name.</div>
                   </div>
-                  <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email*" name="email" ng-model="formData.email" required>
-                    <div class="error-msg" ng-show="contactForm.email.$error.required && contactForm.email.$touched">Please Enter Your Email.</div>
+                  <div class=form-group>
+                    <input type=email class=form-control id=exampleInputEmail1 placeholder=Email* name=email ng-model=formData.email required="">
+                    <div class=error-msg ng-show="contactForm.email.$error.required && contactForm.email.$touched">Please Enter Your Email.</div>
                   </div>
-                  <div class="form-group">
-                    <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="Phone" name="phone" ng-model="formData.phone">
+                  <div class=form-group>
+                    <input type=tel class=form-control id=exampleInputEmail1 placeholder=Phone* name=phone ng-model=formData.phone required>
+                    <div class=error-msg ng-show="contactForm.phone.$error.required && contactForm.phone.$touched">Please Enter Your Phone Number.</div>
                   </div>
-                  <div class="form-group">
-                    <textarea class="form-control" rows="3" placeholder="Message*" style="resize:none;" name="message" ng-model="formData.message" required></textarea>
-                    <div class="error-msg" ng-show="contactForm.message.$error.required && contactForm.message.$touched">Please Enter Some Message.</div>
+                  <div class=form-group>
+                    <textarea class=form-control rows=3 placeholder=Message* style=resize:none; name=message ng-model=formData.message required=""></textarea>
+                    <div class=error-msg ng-show="contactForm.message.$error.required && contactForm.message.$touched">Please Enter Some Message.</div>
                   </div>
                 </form>
-                <div class="pull-right sub">
-                  <a href="" class="color-primary" ng-class="{'disabled' : !contactForm.$valid }" ng-click="submitContactForm(contactForm,formData)">SUBMIT</a>
-                </div>
+                <div class="pull-right sub"><a class=color-primary ng-class="{'disabled' : !contactForm.$valid }" ng-click=submitContactForm(contactForm,formData)>SUBMIT</a></div>
               </div>
-              <div class="submit-over" ng-show="thankyouact">
-                <h2>Thank You!!</h2>
-              </div>
+              <div class=submit-over ng-show=thankyouact>
+                <h2>Thank You</h2></div>
             </div>
+            <!-- <div class=submit-over> -->
           </div>
         </div>
       </div>
