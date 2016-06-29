@@ -457,6 +457,16 @@ a {
 .border-right {
   border-right: 1px solid #fff;
 }
+.contact-form {
+  button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    &:hover {
+      color: darken($brand-primary, 10%);
+    }
+  }
+}
 .contact-detail {
   padding-bottom: 30px;
   padding-left: 30px;
@@ -1057,7 +1067,7 @@ ol.flex-control-nav.flex-control-paging {
   -webkit-animation-delay: -1s;
   animation-delay: -1s;
 }
-.down-arrow{
+.down-arrow {
   cursor: pointer;
 }
 @import "mobile";

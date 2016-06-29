@@ -43,6 +43,7 @@
   }
   .border-right {
     border-right: 0;
+    padding: 0 10px;
   }
   .pd80 {
     padding: 20px;
@@ -68,7 +69,7 @@
   }
   .width90 {
     width: 90%;
-    margin-top: 30px;
+    margin-top: 50px;
   }
   .image-menu {
     display: none;
@@ -86,12 +87,11 @@
   .contact-detail {
     padding-left: 0;
     padding-bottom: 10px;
-    min-height: auto;
+    min-height: inherit!important;
     p {
       line-height: 100%;
       margin: 0;
       font-size: 13px;
-      text-align: justify;
     }
   }
 }
@@ -136,8 +136,11 @@
     padding-top: 0;
   }
   .f20 {
-    font-size: 20px;
-    margin: 0 0 5px;
+    font-size: 16px;
+    margin: 0;
+  }
+  .form-control {
+    height: 25px;
   }
   .naya-detail p {
     font-size: 11.5px;
@@ -151,11 +154,17 @@
   // .slider-mid {
   //   width: 100%;
   // }
+  .num {
+    font-size: 10px!important;
+  }
   .mt0 {
     margin-top: 0;
   }
   .mobil-w {
-    width: 50%;
+    width: 25%;
+  }
+  .width100 {
+    width: 100%;
   }
   .naya-bow {
     width: 100%;
@@ -209,8 +218,7 @@
     font-size: 15px;
   }
   .f13 {
-    font-size: 13px;
-    text-align: justify;
+    font-size: 10px;
   }
   .num span {
     padding: 8px 0;
@@ -231,18 +239,29 @@
     p {
       line-height: 100%;
       margin: 0;
-      font-size: 13px;
-      text-align: justify;
+      font-size: 10px;
+      text-align: left!important;
     }
+  }
+  .contact-form {
+    margin-top: 10px;
+  }
+  .width90 .title {
+    margin-left: -6px;
+    margin-bottom: 10px;
   }
   .pd80 {
     padding: 0;
   }
   textarea.form-control {
-    height: 60px;
+    height: 45px;
   }
   .collection-ht {
     height: 340px;
+  }
+  .width90 {
+    width: 100%;
+    margin-top: 20px;
   }
 }
 @media (max-width: 375px) {

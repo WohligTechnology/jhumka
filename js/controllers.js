@@ -83,20 +83,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.thankyouact = false;
   $scope.submitContactForm = function(contactForm, formData) {
     $scope.thankyouact = false;
-
-    console.log('form values: ', formData);
+    // console.log('form values: ', formData);
     NavigationService.submitContact(formData, function(data) {
       console.log(data);
       $scope.thankyouact = true;
-      $timeout(function() {
-        $scope.thankyouact = false;
-        $scope.formData = {};
-        console.log($scope.formData);
-        contactForm.name.$touched = false;
-        contactForm.email.$touched = false;
-        contactForm.phone.$touched = false;
-        contactForm.message.$touched = false;
-      }, 1000);
+      // $timeout(function() {
+      //   $scope.thankyouact = false;
+      //   $scope.formData = {};
+      //   console.log($scope.formData);
+      //   contactForm.name.$touched = false;
+      //   contactForm.email.$touched = false;
+      //   contactForm.phone.$touched = false;
+      //   contactForm.message.$touched = false;
+      // }, 1000);
     });
   };
 })

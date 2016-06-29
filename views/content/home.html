@@ -185,7 +185,7 @@
     </div>
   </section>
   <section class="section naya-section position-relative" id=naya auto-height="">
-    <div class="slider-mid width80">
+    <div class="slider-mid width80 width100">
       <div class=container>
         <div class=row>
           <div class="col-md-offset-1 col-md-10 col-xs-12">
@@ -207,8 +207,6 @@
           </div>
         </div>
         <br>
-        <br>
-        <br>
         <div class="naya-title text-center" ng-click="changePage('ananya')">
           <h2 class="color-base f20 bold down-arrow"><span class="tcon-indicator" aria-label="scroll" aria-hidden="true"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="tcon-svgchevron" viewBox="0 0 30 36"><path class="a3" d="M0,0l15,16L30,0"></path><path class="a2" d="M0,10l15,16l15-16"></path>
             <path class="a1" d="M0,20l15,16l15-16"></path></svg></span></h2> </div>
@@ -216,7 +214,7 @@
     </div>
   </section>
   <section class="section ananya-section naya-section position-relative" auto-height>
-    <div class="slider-mid width80">
+    <div class="slider-mid width80 width100">
       <div class="container">
 
         <div class="row">
@@ -358,7 +356,7 @@
           </div>
         </div>
         <div class="row mt30 mmt10">
-          <div class="col-md-3 col-sm-5 col-xs-6 border-right">
+          <div class="col-md-3 col-sm-5 col-xs-4 border-right">
             <div class="contact-detail">
               <a href="https://www.google.com/mapmaker?gw=55&editids=YTL2-ZqnKlwqdNwxYT&iwloc=0_0" target="_blank">
                 <p>Chennai office :</p>
@@ -370,7 +368,7 @@
               <div class="email"><a href="mailto:info@naya.com" class="color-primary f16 f13">info@naya.com</a></div>
             </div>
           </div>
-          <div class="col-md-3 col-sm-5 col-xs-6 border-right">
+          <div class="col-md-3 col-sm-5 col-xs-4 border-right">
             <div class="contact-detail">
               <a href="https://www.google.com/mapmaker?gw=55&editids=r0DFt4RDljdMUBIN8u&iwloc=0_0" target="_blank">
                 <p>New Delhi office :</p>
@@ -382,7 +380,7 @@
               <div class="email"><a href="mailto:info@naya.com" class="color-primary f16 f13">info@naya.com</a></div>
             </div>
           </div>
-          <div class=" col-md-3 col-sm-5 col-xs-12 border-right">
+          <div class=" col-md-3 col-sm-5 col-xs-4 border-right">
             <div class="contact-detail">
               <a href="https://www.google.com/mapmaker?gw=55&editids=kb3d2SFjsWgx1tS_Ih&iwloc=0_0" target="_blank">
                 <p>Bangalore office :</p>
@@ -397,13 +395,13 @@
           <div class="col-md-3 col-sm-7 col-xs-12">
             <div class="contact-form">
               <div ng-hide=thankyouact>
-                <form name=contactForm>
+                <form name=contactForm  ng-submit=submitContactForm(contactForm,formData)>
                   <div class=form-group>
-                    <input type=text class=form-control id=exampleInputEmail1 placeholder=Name* name=name ng-model=formData.name required="">
+                    <input type=text class=form-control id=exampleInputEmail1 placeholder=Name* name=name ng-model=formData.name required>
                     <div class=error-msg ng-show="contactForm.name.$error.required && contactForm.name.$touched">Please Enter Your Name.</div>
                   </div>
                   <div class=form-group>
-                    <input type=email class=form-control id=exampleInputEmail1 placeholder=Email* name=email ng-model=formData.email required="">
+                    <input type=email class=form-control id=exampleInputEmail1 placeholder=Email* name=email ng-model=formData.email required>
                     <div class=error-msg ng-show="contactForm.email.$error.required && contactForm.email.$touched">Please Enter Your Email.</div>
                   </div>
                   <div class=form-group>
@@ -411,11 +409,11 @@
                     <div class=error-msg ng-show="contactForm.phone.$error.required && contactForm.phone.$touched">Please Enter Your Phone Number.</div>
                   </div>
                   <div class=form-group>
-                    <textarea class=form-control rows=3 placeholder=Message* style=resize:none; name=message ng-model=formData.message required=""></textarea>
+                    <textarea class=form-control rows=3 placeholder=Message* style=resize:none; name=message ng-model=formData.message required></textarea>
                     <div class=error-msg ng-show="contactForm.message.$error.required && contactForm.message.$touched">Please Enter Some Message.</div>
                   </div>
+                  <div class="pull-right sub"><button type="submit" class="color-primary" ng-disabled="contactForm.$invalid">SUBMIT</button></div>
                 </form>
-                <div class="pull-right sub"><a class=color-primary ng-class="{'disabled' : !contactForm.$valid }" ng-click=submitContactForm(contactForm,formData)>SUBMIT</a></div>
               </div>
               <div class=submit-over ng-show=thankyouact>
                 <h2>Thank You</h2></div>
