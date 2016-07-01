@@ -277,6 +277,7 @@ a {
   @include position(absolute, 50% null null 50%);
   @include transform (translatex(-50%) translatey(-50%));
   z-index: 9;
+  min-height: 350px;
   .seeall {
     margin-top: 18px;
     padding-right: 70px;
@@ -412,6 +413,7 @@ a {
 }
 .address {
   padding-left: 30px;
+  height: 150px;
   a {
     color: $base-color;
   }
@@ -469,7 +471,6 @@ a {
 }
 .contact-detail {
   padding-bottom: 30px;
-  padding-left: 30px;
   min-height: 230px;
   a:hover {
     p {

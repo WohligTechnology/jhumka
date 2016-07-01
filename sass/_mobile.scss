@@ -43,7 +43,6 @@
   }
   .border-right {
     border-right: 0;
-    padding: 0 10px;
   }
   .pd80 {
     padding: 20px;
@@ -247,8 +246,7 @@
     margin-top: 10px;
   }
   .width90 .title {
-    margin-left: -6px;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
   }
   .pd80 {
     padding: 0;
@@ -272,5 +270,45 @@
 @media (max-width: 340px) {
   .collection-ht {
     height: 240px;
+  }
+}
+@media (max-width: $screen-sm-max) and (orientation : landscape) {
+  .scrolldownflower {
+    top: 45%;
+  }
+  .home-menu {
+    bottom: 45px;
+  }
+  .scroll {
+    height: 150px;
+    overflow: scroll;
+  }
+  .title-colletcion h1 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  .category-title h1 {
+    margin: 0;
+    font-size: 18px;
+  }
+  .category-title .hover-category a img {
+    width: 50px;
+  }
+  .mrg-landscape {
+    margin-top: 35px;
+  }
+  .mobil-w {
+    width: 15%;
+  }
+  .mrg-landscape65 {
+    margin-top: 65px;
+  }
+  .press-box {
+    margin-bottom: 5px;
+    height: 90px;
+  }
+  .img-box {
+    height: 100px;
+    overflow: hidden;
   }
 }
