@@ -45,11 +45,55 @@
     var switchTo5x = true;
   </script>
   <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-  <script type="text/javascript">stLight.options({publisher: "4b58d13b-6240-4b86-a204-e72e637dc70a", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+  <script type="text/javascript">
+    stLight.options({
+      publisher: "ur-46a312b2-8f7d-6d24-5cc0-baae34efb2aa",
+      doNotHash: false,
+      doNotCopy: false,
+      hashAddressBar: false
+    });
+  </script>
 </head>
 
 <body>
-  <div class="repeated-item" ui-view></div>
+  <div class="repeated-item loadedContent" ui-view></div>
+  <div class="rotateMobile" style="display:none;">
+    <img src="img\logo-mid.png" alt="Naya">
+    <h1>Tilt the mobile for website view </h1>
+    <!--
+		<div class="btn-mobile">
+			<button class="btn btn-warning continue" style="padding: 10px 25px!important;font-size: 18px;background: #F6E730;color: #000;">Continue</button>
+		</div>
+-->
+  </div>
+  <script>
+    $(window).load(function() {
+      console.log("Loaded");
+      // $("body > .loader").hide();
+      $("body > .loadedContent").fadeIn(1000);
+      if (window.matchMedia("(orientation: landscape)").matches) {
+        $("body > .rotateMobile").fadeIn(1000);
+        setInterval(function() {
+          console.log("Check");
+          if (window.matchMedia("(orientation:portrait )").matches) {
+            window.location.reload();
+            console.log("Check");
+          }
+        }, 500);
+      }
+      if (window.matchMedia("(orientation: landscape)").matches) {
+        setInterval(function() {
+          console.log("Check");
+          if (window.matchMedia("(orientation: portrait)").matches) {
+            window.location.reload();
+          }
+        }, 500);
+      }
+      $("body > .rotateMobile .continue").click(function() {
+        $("body > .rotateMobile").fadeOut(1000);
+      });
+    });
+  </script>
 </body>
 
 </html>
