@@ -2,19 +2,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
   //Used to name the .html file
-
   $scope.template = TemplateService.changecontent("home");
   $scope.menutitle = NavigationService.makeactive("Home");
   TemplateService.title = $scope.menutitle;
-  $scope.formData={};
+  $scope.formData = {};
   $scope.navigation = NavigationService.getnav();
   $scope.changePage = function(text) {
+    console.log(text);
     var length = $(".fp-section").length;
     console.log(length);
     console.log($(".fp-section"));
-    if (typeof $.fn.fullpage.destroy == 'function') {
-      $.fn.fullpage.destroy('all');
-    }
+    // if (typeof $.fn.fullpage.destroy == 'function') {
+    //   $.fn.fullpage.destroy('all');
+    // }
     if (length === 0) {
       $('.fullpage').fullpage();
     }
@@ -80,23 +80,22 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   };
   $scope.addressselect = "mumbai";
   $scope.getAddress('mumbai');
-  $scope.thankyouact=false;
+  $scope.thankyouact = false;
   $scope.submitContactForm = function(contactForm, formData) {
-    $scope.thankyouact=false;
-
-    console.log('form values: ', formData);
+    $scope.thankyouact = false;
+    // console.log('form values: ', formData);
     NavigationService.submitContact(formData, function(data) {
       console.log(data);
-      $scope.thankyouact=true;
-      $timeout(function(){
-        $scope.thankyouact=false;
-        $scope.formData={};
-        console.log($scope.formData);
-        contactForm.name.$touched=false;
-        contactForm.email.$touched=false;
-        contactForm.phone.$touched=false;
-        contactForm.message.$touched=false;
-      },1000);
+      $scope.thankyouact = true;
+      // $timeout(function() {
+      //   $scope.thankyouact = false;
+      //   $scope.formData = {};
+      //   console.log($scope.formData);
+      //   contactForm.name.$touched = false;
+      //   contactForm.email.$touched = false;
+      //   contactForm.phone.$touched = false;
+      //   contactForm.message.$touched = false;
+      // }, 1000);
     });
   };
 })
@@ -107,7 +106,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
-
+    TemplateService.footer = "";
+    if (typeof $.fn.fullpage.destroy == 'function') {
+      $.fn.fullpage.destroy('all');
+    }
     // $scope.collection = [{
     //   img: "img/c1.jpg",
     //   desc: "The Lotus is very symbolic and important element in the Chakra’s. "
@@ -148,13 +150,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       $scope.press = data;
       console.log(data);
     });
+    if (typeof $.fn.fullpage.destroy == 'function') {
+      $.fn.fullpage.destroy('all');
+    }
   })
 
 .controller('headerctrl', function($scope, TemplateService) {
   $scope.template = TemplateService;
   $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
     $(window).scrollTop(0);
+    $.fancybox.close(true);
   });
-})
 
-;
+});

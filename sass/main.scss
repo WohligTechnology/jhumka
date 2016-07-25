@@ -36,9 +36,9 @@ $font-family-serif: "ColabThi","avia",serif !default;
   font-weight: normal;
   font-style: normal;
 }
-body {
-  overflow-y: scroll !important;
-}
+// body {
+//   overflow-y: scroll !important;
+// }
 img.loading {
   text-align: center;
   opacity: 1;
@@ -56,7 +56,8 @@ nav li:hover .dropdown-menu {
   display: block;
 }
 .navbar-brand img {
-  width: 140px;
+  width: 160px;
+  @include transition(all ease 0ms);
 }
 a {
   text-decoration: none;
@@ -153,7 +154,7 @@ a {
 }
 .sticky-bottom {
   position: absolute;
-  height: 50px;
+  // height: 50px;
   top: 0;
   display: none;
   width: 100%;
@@ -180,7 +181,7 @@ a {
 .fp-viewing-5,
 .fp-viewing-6,
  {
-  overflow: hidden !important;
+  overflow: none !important;
   .sticky-bottom {
     display: block;
   }
@@ -200,7 +201,10 @@ a {
     margin-bottom: 0;
     li {
       display: inline-block;
-      // padding: 0 8px;
+      @include transition(all ease 300ms);
+      &:hover img {
+        opacity: 0.6;
+      }
     }
   }
 }
@@ -258,6 +262,9 @@ a {
 .pl20 {
   padding-left: 20px;
 }
+.ml20 {
+  margin-left: 10px;
+}
 // .social-feed {
 //   padding-top: 16px;
 // }
@@ -271,6 +278,11 @@ a {
   @include position(absolute, 50% null null 50%);
   @include transform (translatex(-50%) translatey(-50%));
   z-index: 9;
+  min-height: 350px;
+  .seeall {
+    margin-top: 18px;
+    padding-right: 70px;
+  }
 }
 .position-relative {
   position: relative;
@@ -292,8 +304,7 @@ a {
         color: $base-color;
         @include transition(all ease 500ms);
         &:hover {
-          color: darken($base-color, 50%);
-          font-weight: 600;
+          font-weight: 700;
         }
       }
     }
@@ -329,6 +340,9 @@ a {
 }
 .pt40 {
   padding-top: 40px;
+}
+.pt80 {
+  padding-top: 80px;
 }
 .pd80 {
   padding: 80px;
@@ -403,6 +417,10 @@ a {
 }
 .address {
   padding-left: 30px;
+  height: 150px;
+  a {
+    color: $base-color;
+  }
 }
 .address-detail {
   p {
@@ -445,8 +463,24 @@ a {
 .border-right {
   border-right: 1px solid #fff;
 }
+.contact-form {
+  button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    &:hover {
+      color: darken($brand-primary, 10%);
+    }
+  }
+}
 .contact-detail {
   padding-bottom: 30px;
+  min-height: 230px;
+  a:hover {
+    p {
+      color: darken($brand-primary, 10%);
+    }
+  }
   p {
     color: $brand-primary;
     line-height: 80%;
@@ -494,7 +528,7 @@ a {
   // position: absolute;
   // top: 0;
   img {
-    width: 60%;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -505,12 +539,15 @@ a {
   text-transform: uppercase;
 }
 .collection-ht {
-  height: 275px;
+  height: 317px;
 }
 .collection-box {
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
+  background: #cdcdcd;
+  border-style: groove;
+  border-width: 0.5px 0.5px 0.5px 0.5px;
   svg:hover {
     color: #000;
   }
@@ -521,14 +558,13 @@ a {
 }
 .hover-desc {
   position: absolute;
-  background: #e0e0e0;
-  padding: 10px 26px;
-  font-family: 'Rajdhani';
-  font-weight: 500;
-  color: #4d4d4d;
-  display: block;
   bottom: 0;
-  left: 0;
+  background: rgba(0,0,0,.63);
+  color: #fff;
+  padding: 6px 10px 0;
+  font-family: ColabThi,avia,Rajdhani,sans-seri;
+  line-height: 125%;
+  font-size: 18px;
   width: 100%;
 }
 .pad10 {
@@ -557,21 +593,26 @@ a {
     opacity: 0;
     position: relative;
     @include transition(all 300ms ease);
+    width: 30px;
+    height: 30px;
     i {
       font-size: 16px;
       padding-top: 8px;
       position: absolute;
+      top: 0;
+      right: 0;
       width: 100%;
       text-align: center;
       @include transition(all ease 300ms);
       &:hover {
-        color: lighten(#000, 50%) important;
+        color: lighten(#000, 50%) !important;
       }
     }
     span {
       opacity: 0;
-      width: 10px;
+      width: 35px;
       height: 25px;
+      display: block;
     }
   }
   .click {
@@ -581,12 +622,12 @@ a {
     &:hover {
       .fb-hover {
         opacity: 1;
-        i {
-          color: #333 !important;
-          &:focus {
-            color: #333 !important;
-          }
-        }
+        // i {
+        //   color: #333 !important;
+        //   &:focus {
+        //     color: #333 !important;
+        //   }
+        // }
       }
       .grey-col {
         fill: #cacaca;
@@ -615,7 +656,7 @@ a {
   bottom: 0;
 }
 footer {
-  background: #000;
+  background: $base-color;
 }
 .menu-hover {
   .dropdowns {
@@ -658,7 +699,7 @@ footer {
   position: relative;
   cursor: pointer;
   padding: 12px 0 17px;
-  &:hover {
+  &.showmenu {
     .dropdowns {
       display: block;
     }
@@ -677,6 +718,7 @@ footer {
   float: none;
   margin-left: 0;
   padding: 0;
+  height: auto;
   img {
     vertical-align: text-top;
     display: inherit;
@@ -729,7 +771,7 @@ img.fancybox-image {
   }
   &.top {
     top: auto;
-    bottom: 20px;
+    bottom: 0;
     width: 98.7%;
   }
   a.btnToggle {
@@ -806,11 +848,16 @@ img.fancybox-image {
 ol.flex-control-nav.flex-control-paging {
   // display: none;
 }
-.fancybox-title {
+// .fancybox-title {
+//   position: absolute;
+//   top: 0;
+//   left: 30px;
+//   width: 70px;
+// }
+.collection-detail.inside {
   position: absolute;
-  top: 0;
-  left: 30px;
-  width: 70px;
+  bottom: 20px;
+  left: 20px;
 }
 .icon-image {
   cursor: pointer;
@@ -853,15 +900,182 @@ ol.flex-control-nav.flex-control-paging {
   }
 }
 .min-hght {
-  min-height: 600px;
+  min-height: 980px;
 }
-.submit-over h2 {
+.mar-top {
+  margin-top: 30px;
+}
+.fancybox-title-inside-wrap {
+  padding-top: 0;
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  width: 90%;
+}
+.fancybox-next,
+ {
+  span {
+    text-align: right;
+  }
+  span:after {
+    content: '\f0da';
+  }
+}
+.fancybox-prev,
+ {
+  span:after {
+    content: '\f0d9 ';
+  }
+}
+#fancybox-buttons {
+  display: none;
+}
+.fancybox-next,
+.fancybox-prev {
+  span {
+    background-position: 0;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 36px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: none;
+    color: #cacaca;
+  }
+}
+.scrolldownflower {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-  color: #000;
-  font-size: 40px;
-  font-weight: 700;
+  @include transform(translate(-50%,-50%));
+  z-index: 9999999;
+}
+.contain-mid img {
+  width: 125px;
+}
+@-webkit-keyframes chevron-pulse {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes chevron-pulse {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.tcon-svgchevron {
+  height: 40px;
+  width: 40px;
+}
+.tcon-svgchevron path {
+  -webkit-animation: chevron-pulse 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  animation: chevron-pulse 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
+  stroke: black;
+  stroke-width: 1px;
+}
+.tcon-svgchevron path.a1 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.tcon-svgchevron path.a2 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+.tcon-svgchevron path.a3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+.contact-form {
+  height: 300px;
+  position: relative;
+}
+.submit-over {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  @include transform(translate(-50%,-50%));
+  h2 {
+    margin: 0;
+    font-size: 40px;
+    text-align: center;
+    color: $base-color;
+  }
+}
+@-webkit-keyframes chevron-pulse {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes chevron-pulse {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.tcon-svgchevron {
+  height: 40px;
+  width: 40px;
+}
+.tcon-svgchevron path {
+  -webkit-animation: chevron-pulse 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  animation: chevron-pulse 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
+  stroke: black;
+  stroke-width: 1px;
+}
+.tcon-svgchevron path.a1 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.tcon-svgchevron path.a2 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+.tcon-svgchevron path.a3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+.down-arrow {
+  cursor: pointer;
+}
+.rotateMobile {
+  display: none;
 }
 @import "mobile";

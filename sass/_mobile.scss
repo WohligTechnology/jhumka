@@ -14,12 +14,24 @@
   .slider {
     width: 560px;
   }
+  .slider-mid .seeall {
+    padding-right: 10px;
+  }
+  .img-title {
+    font-size: 16px;
+    line-height: 100%;
+  }
+  .img-desc {
+    font-size: 13px;
+    padding-top: 5px;
+    line-height: 100%;
+  }
   .naya-bow {
-    width: 70%;
+    width: 30%;
   }
-  .social-feed {
-    padding-top: 8px;
-  }
+  // .social-feed {
+  //   padding-top: 8px;
+  // }
   .mt30 {
     margin-top: 10px;
   }
@@ -42,6 +54,9 @@
     width: 75%;
     margin: 0 auto;
   }
+  .slider-mid {
+    width: 100%;
+  }
   .slider {
     width: 285px;
   }
@@ -51,11 +66,32 @@
   .width80 {
     width: 80%;
   }
+  .width90 {
+    width: 90%;
+    margin-top: 50px;
+  }
   .image-menu {
-    left: 10px;
+    display: none;
   }
   .home-menu ul li {
     padding: 0 7px;
+  }
+  .social-feed {
+    padding-top: 10px;
+  }
+  .submit-over h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .contact-detail {
+    padding-left: 0;
+    padding-bottom: 10px;
+    min-height: inherit!important;
+    p {
+      line-height: 100%;
+      margin: 0;
+      font-size: 13px;
+    }
   }
 }
 @media (max-width: 480px) {
@@ -65,6 +101,10 @@
       zoom: 0.7;
     }
   }
+  .slider-mid .seeall {
+    margin-top: -12px;
+    padding-right: 0;
+  }
   .category-title h1 {
     font-size: 24px;
   }
@@ -73,21 +113,10 @@
   }
   .navbar-brand img {
     vertical-align: -webkit-baseline-middle;
-    zoom: 0.6;
+    zoom: 0.5;
   }
   .pl20 {
     padding-left: 0;
-  }
-  .social-feed {
-    padding-top: 10px;
-  }
-  .image-menu {
-    left: 10px;
-    top: 40px;
-    svg:not(:root) {
-      overflow: hidden;
-      width: 60px;
-    }
   }
   .home-menu {
     bottom: 45px;
@@ -106,26 +135,35 @@
     padding-top: 0;
   }
   .f20 {
-    font-size: 20px;
-    margin: 0 0 5px;
+    font-size: 16px;
+    margin: 0;
+  }
+  .form-control {
+    height: 25px;
   }
   .naya-detail p {
     font-size: 11.5px;
     margin: 0 0 7px;
-    line-height: 115%;
+    line-height: 110%;
     text-align: justify;
   }
   .naya-content {
     margin-top: 50px;
   }
-  .slider-mid {
-    width: 100%;
+  // .slider-mid {
+  //   width: 100%;
+  // }
+  .num {
+    font-size: 10px!important;
   }
   .mt0 {
     margin-top: 0;
   }
   .mobil-w {
-    width: 50%;
+    width: 25%;
+  }
+  .width100 {
+    width: 100%;
   }
   .naya-bow {
     width: 100%;
@@ -164,7 +202,7 @@
     margin-top: 15px;
   }
   .mmt10 {
-    margin-top: 10px;
+    margin-top: 0;
   }
   .select-city .form-control {
     height: 40px;
@@ -179,13 +217,7 @@
     font-size: 15px;
   }
   .f13 {
-    font-size: 13px;
-    text-align: justify;
-  }
-  .contact-detail p {
-    line-height: 60%;
-    font-size: 13px;
-    text-align: justify;
+    font-size: 10px;
   }
   .num span {
     padding: 8px 0;
@@ -203,15 +235,31 @@
   }
   .contact-detail {
     padding-bottom: 5px;
+    p {
+      line-height: 100%;
+      margin: 0;
+      font-size: 10px;
+      text-align: left!important;
+    }
+  }
+  .contact-form {
+    margin-top: 10px;
+  }
+  .width90 .title {
+    margin-bottom: 2px;
   }
   .pd80 {
     padding: 0;
   }
   textarea.form-control {
-    height: 60px;
+    height: 45px;
   }
   .collection-ht {
     height: 340px;
+  }
+  .width90 {
+    width: 100%;
+    margin-top: 20px;
   }
 }
 @media (max-width: 375px) {
@@ -222,5 +270,110 @@
 @media (max-width: 340px) {
   .collection-ht {
     height: 240px;
+  }
+}
+@media (max-width: $screen-sm-max) and (orientation : landscape) {
+  .scrolldownflower {
+    top: 45%;
+  }
+  .home-menu {
+    bottom: 45px;
+  }
+  .scrolldownflower {
+    svg:not(:root) {
+      overflow: hidden;
+      width: 60px !important;
+      height: auto;
+    }
+  }
+  .contain-mid img {
+    width: 85px;
+  }
+  // .scroll {
+  //   height: 150px;
+  //   overflow: scroll;
+  // }
+  .fp-viewing-0,
+  .fp-viewing-1,
+  .fp-viewing-2,
+  .fp-viewing-3,
+  .fp-viewing-4,
+  .fp-viewing-5,
+  .fp-viewing-6 {
+    overflow: scroll !important;
+  }
+  .section {
+    height: 500px !important;
+  }
+  .title-colletcion h1 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  .category-title h1 {
+    margin: 0;
+    font-size: 18px;
+  }
+  .category-title .hover-category a img {
+    width: 50px;
+  }
+  .title h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  .mrg-landscape {
+    margin-top: 35px;
+  }
+  .mobil-w {
+    width: 15%;
+  }
+  .category-section {
+    overflow: scroll;
+    height: 600px!important;
+  }
+  .fp-tableCell {
+    height: 600px!important;
+  }
+  .mrg-landscape65 {
+    margin-top: 65px;
+  }
+  .press-box {
+    margin-bottom: 5px;
+    height: 90px;
+  }
+  .img-box {
+    height: 100px;
+    overflow: hidden;
+  }
+}
+@media (max-width:767px) {
+  .rotateMobile {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    background: #4d4d4d;
+    right: 0;
+    left: 0;
+    text-align: center;
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      color: #fff;
+      top: 60%;
+      left: 50%;
+      position: absolute;
+      @include transform(translate(-50%,-50%));
+    }
+    img {
+      width: 27%;
+      margin: 0;
+      font-size: 30px;
+      color: #fff;
+      top: 30%;
+      left: 50%;
+      position: absolute;
+      @include transform(translate(-50%,-50%));
+    }
   }
 }
