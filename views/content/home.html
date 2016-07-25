@@ -1,249 +1,251 @@
 <div ng-include="template.header" class="template header sticky-bottom"></div>
 <div class="fullpage">
-  <section class="section home-section position-relative">
-    <div class="home-slider">
-      <flex-slider flex-slide="s in mySlides track by $index" class="position-relative">
-        <li>
-          <div class="bg-slider" ng-style="{'background-image':'url({{s.img|serverimage}})'}" auto-height class="img-responsive"></div>
-        </li>
-      </flex-slider>
-      <div class="home-menu custom-li">
-        <ul>
-          <li>
-            <a ui-sref="about">ABOUT</a>
-          </li>
-          <li>
-            <a ui-sref="collectionhome">COLLECTIONS</a>
-          </li>
-          <li>
-            <a ui-sref="press">PRESS</a>
-          </li>
-          <li>
-            <a ui-sref="stockist">STOCKISTS</a>
-          </li>
-          <li>
-            <a ui-sref="contact">CONTACT</a>
-          </li>
-        </ul>
-      </div>
+    <section class="section home-section position-relative">
+        <div class="home-slider">
+            <flex-slider flex-slide="s in mySlides track by $index" class="position-relative">
+            <li>
+                <div class="bg-slider" ng-style="{'background-image':'url({{s.img|serverimage}})'}" auto-height class="img-responsive"></div>
+            </li>
+        </flex-slider>
+        <div class="home-menu custom-li">
+            <ul>
+                <li>
+                    <a ui-sref="about">ABOUT</a>
+                </li>
+                <li>
+                    <a ui-sref="collectionhome">COLLECTIONS</a>
+                </li>
+                <li>
+                    <a ui-sref="press">PRESS</a>
+                </li>
+                <li>
+                    <a ui-sref="stockist">STOCKISTS</a>
+                </li>
+                <li>
+                    <a ui-sref="contact">CONTACT</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </section>
-  <section class="section naya-section position-relative" id="naya" auto-height>
+</section>
+<section class="section naya-section position-relative" id="naya" auto-height>
     <div class="slider-mid width80">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-offset-1 col-md-10 col-xs-12">
-            <div class="naya-content">
-              <div class="naya-title text-center">
-                <h2 class="color-base f20 bold">NAYA</h2>
-              </div>
-              <div class="naya-detail color-base mt30 mt0 text-justify">
-                <p>The brand Naya, which is Hindi for New, has its roots in tradition. Naya revives elements of Indian philosophies that have been diluted or lost over time, reintroducing these elements in a contemporary way and expressing them through fine
-                  jewellery.
-                </p>
-                <p>Naya’s first endeavour is subdivided into two collections, both inspired by the gateways of life force and energy- The Chakras.
-                </p>
-                <p>
-                  Celestial Lotus – The Lotus is an important symbolic element in the Chakras. It is often used to visualise each Chakra and represents cosmic harmony and consciousness. The collection translates the visual language of the Lotus symbolizing it in contemporary
-                  and geometric forms. A juxtaposition of edgy detailing with delicate forms in a palette that flows from red rubies, pink tourmalines, pleochroic tanzanites and black diamonds and pearls.
-                </p>
-                <p>
-                  Synergies – A Chakra is the platform in which energies blend and synergize. Energy is always in motion, interweaving and interconnecting. This collection is about activating multiple Chakras by using complementary stones and pieces of jewellery creating
-                  a symbiosis that a single Chakra could not easily reach. The movement or transition of these energies inspired the Synergies collection. A convergence of feminine forms and fluid construction in a monochromatic palette with pops of colour.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section ananya-section naya-section position-relative" auto-height>
-    <div class="slider-mid width80">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-md-offset-1 col-md-3 col-xs-12">
-            <div class="naya-bow mmt40 hidden-xs">
-              <img src="img/ananya.jpg" alt="ananya" class="img-responsive mobil-w">
-            </div>
-            <div class="naya-bow mmt40 visible-xs">
-              <img src="img/ananya-mobile.jpg" alt="ananya" class="img-responsive mobil-w">
-            </div>
-          </div>
-          <div class="col-md-7 col-xs-12">
-            <div class="">
-              <div class="naya-title txt-center">
-                <h2 class="color-base margin0 f20 bold">ANANYA</h2>
-              </div>
-              <div class="naya-detail mt30 mmt10 text-justify">
-                <p>The brand Naya, which is Hindi for New, has its roots in tradition. Naya revives elements of Indian philosophies that have been diluted or lost over time, reintroducing these elements in a contemporary way and expressing them through fine
-                  jewellery.
-                </p>
-                <p>Naya’s first endeavour is subdivided into two collections, both inspired by the gateways of life force and energy- The Chakras.
-                </p>
-                <p>
-                  Celestial Lotus – The Lotus is an important symbolic element in the Chakras. It is often used to visualise each Chakra and represents cosmic harmony and consciousness. The collection translates the visual language of the Lotus symbolizing it in contemporary
-                  and geometric forms. A juxtaposition of edgy detailing with delicate forms in a palette that flows from red rubies, pink tourmalines, pleochroic tanzanites and black diamonds and pearls.
-                </p>
-                <p>
-                  Synergies – A Chakra is the platform in which energies blend and synergize. Energy is always in motion, interweaving and interconnecting. This collection is about activating multiple Chakras by using complementary stones and pieces of jewellery creating
-                  a symbiosis that a single Chakra could not easily reach. The movement or transition of these energies inspired the Synergies collection. A convergence of feminine forms and fluid construction in a monochromatic palette with pops of colour.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section category-section position-relative" auto-height>
-    <div class="slider-mid">
-      <div class="container">
-        <div class="title-colletcion">
-          <h1 class="color-primary text-up text-center">Collections</h1>
-        </div>
-        <div class="row" ng-repeat="collection in collections track by $index" ui-sref="collection({id:collection.id})">
-          <div class="col-md-offset-4 col-xs-offset-3 col-md-4 col-xs-6">
-            <div class="category-title text-center">
-              <h1 class="on-hover-show">{{collection.name}}</h1>
-              <div class="hover-category">
-                <a ui-sref="collection"><img ng-src="{{collection.image|serverimage}}" alt="ring" class="img-responsive margin0-auto" style="cursor:pointer;"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section press-section naya-section position-relative" auto-height>
-    <div class="slider-mid width80">
-      <div class="container">
-        <div class="title text-center pt40">
-          <h1 class="f20 bold">PRESS</h1>
-        </div>
-        <div class="row mmt15 pd80">
-          <div class="col-md-4 col-xs-6" ng-repeat="pressitem in press track by $index | limitTo:3 ">
-            <a ui-sref="press">
-              <div class="press-box position-relative">
-                <div class="img-box">
-                  <img ng-src="{{pressitem.image|serverimage}}" alt="{{pressitem.name}}" class="img-responsive">
-                </div>
-                <div class="img-descp">
-                  <div class="img-title">
-                    <span>{{pressitem.name}}</span>
-                  </div>
-                  <div class="img-desc" ng-bind-html="pressitem.description">
-                    <!-- <P>{{pressitem.desc}}</P> -->
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section stockist-section naya-section position-relative" auto-height>
-    <div class="slider-mid">
-      <div class="container">
-        <div class="title text-center hidden-xs">
-          <h1 class="bold">STOCKISTS</h1>
-        </div>
-        <div class="row mt30">
-          <div class="col-md-offset-4 col-md-4">
-            <div class="title text-center hidden-md hidden-lg mmt15">
-              <h1 class="f20">STOCKISTS</h1>
-            </div>
-            <div class="title text-center">
-              <h4 class="f15">SELECT CITY</h4>
-            </div>
+        <div class="container">
             <div class="row">
-              <div class="col-md-offset-1 col-md-10">
-                <div class="select-city">
-                  <select class="form-control" ng-model="addressselect"ng-change="getAddress(addressselect)">
-                    <option value="{{cities.city}}" ng-repeat="cities in stockists track by $index">{{cities.city}}</option>
-                  </select>
+                <div class="col-md-offset-1 col-md-10 col-xs-12">
+                    <div class="naya-content">
+                        <div class="naya-title text-center">
+                            <h2 class="color-base f20 bold">NAYA</h2>
+                        </div>
+                        <div class="naya-detail color-base mt30 mt0 text-justify">
+                            <p>TAnanya was surrounded by a culture of jewellery where it is an essential and emblematic element in everyday life and a central pillar of rituals and ceremonies. Her experience of jewellery was more than a collection of objects, rather a symbol
+                                that resonates energy and meaning from a life deep within.
+                            </p>
+                            <p>Her fascination with crystal healing, gemstone energies and Indian philosophies coupled with her love of fine and rare Indian jewellery gave birth to Naya. Her belief about jewellery as a talisman with energy and the ability to enhance one’s life,
+                                transcends its perception as purely material.
+                            </p>
+                            <p>
+                                The brand Naya, which is Hindi for New, has its roots in tradition. Naya revives elements of Indian philosophies that have been diluted or lost over time, reintroducing these elements in a contemporary way and expressing them through fine jewellery.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="address" ng-repeat="add in address track by $index" ng-if="address.length !=0">
-                  <div class="address-title mt30 mmt15">
-                    <h4 class="f15">{{add.title}}
-                </h4>
-                  </div>
-                  <div class="address-detail">
-                    <div ng-bind-html="add.address"></div>
-                    <p>Tel: {{add.phone}}</p>
-                    <p>Fax: {{add.fax}}</p>
-                  </div>
-
-                </div>
-              </div>
             </div>
-
-          </div>
         </div>
-      </div>
     </div>
-  </section>
-  <section class="section  category-section position-relative" auto-height>
+</section>
+<section class="section ananya-section naya-section position-relative" auto-height>
     <div class="slider-mid width80">
-      <div class="container">
-        <div class="row mmt40">
-          <div class="col-md-offset-1 col-md-4">
-            <div class="title">
-              <h1 class="color-primary f20 bold">CONTACT</h1>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-offset-1 col-md-3 col-xs-12">
+                    <div class="naya-bow mmt40 hidden-xs">
+                        <img src="img/ananya.jpg" alt="ananya" class="img-responsive mobil-w">
+                    </div>
+                    <div class="naya-bow mmt40 visible-xs">
+                        <img src="img/ananya-mobile.jpg" alt="ananya" class="img-responsive mobil-w">
+                    </div>
+                </div>
+                <div class="col-md-7 col-xs-12">
+                    <div class="">
+                        <div class="naya-title txt-center">
+                            <h2 class="color-base margin0 f20 bold">ANANYA</h2>
+                        </div>
+                        <div class="naya-detail mt30 mmt10 text-justify">
+                            <p>Born into a family deeply rooted in the fashion industry exposed Ananya to a dynamic world of creativity. She began to develop an ideology about beauty as a powerful energy, an expressive vibration and a sensual awareness that resonates with the
+                                essence of life.
+                            </p>
+                            <p>She discovered the craft that would form the foundation of her creative process, furthering her education with a Bachelor’s Degree at Central Saint Martins in London. As Ananya immersed herself in the art of jewellery, she worked on projects with
+                                institutions like the Victoria and Albert Museum and the Barbican. She was awarded the Suffragettes Design Award where she designed a brooch for celebrated women scientists and Nobel Prize winners. She was also selected by Swarovski to create a piece
+                                for the Runway Rocks fashion show.
+                            </p>
+                            <p>
+                                Having spent time in workshops all over India, she studied indigenous jewellery making traditions and collaborated with one of India’s leading jewellery houses, Amrapali.
+                            </p>
+                            <p>
+                                She continued her exploration of jewels and gemmology with a GG at the GIA. Here she was truly able to experience the world of gems and precious stones, giving her the knowledge to bring the right energies that help enhance one’s state of being.
+                            </p>
+                            <p>
+                                And the idea of Naya was born.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="row mt30 mmt10">
-          <div class="col-md-offset-1 col-md-4 col-sm-5 border-right">
-            <div class="contact-detail">
-              <p>#.71, Meher Building,Shivaji Park,</p>
-              <p>Ranade Road,Dadar West, Mumbai,
-              </p>
-              <p>Maharashtra 400028
-              </p>
-              <div class="num">
-                <a href="tel:+912222832422" class="color-primary f16 f13"> +91 22 2445 5034
-              </a>
-              </div>
-              <div class="email">
-                <a href="mailto:info@naya.com" class="color-primary f16 f13">info@naya.com</a>
-              </div>
+    </div>
+</section>
+<section class="section category-section position-relative" auto-height>
+    <div class="slider-mid">
+        <div class="container">
+            <div class="title-colletcion">
+                <h1 class="color-primary text-up text-center">Collections</h1>
             </div>
-          </div>
-          <div class="col-md-offset-1 col-md-4 col-sm-7">
-            <div class="contact-form" >
-          <div ng-hide="thankyouact">
-            <form action="" name="contactForm">
-              <div class="form-group" name="contactForm">
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name*" name="name" ng-model="formData.name" required>
-                <div class="error-msg" ng-show="contactForm.name.$error.required && contactForm.name.$touched">Please Enter Your Name.</div>
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email*" name="email" ng-model="formData.email" required>
-                <div class="error-msg" ng-show="contactForm.email.$error.required && contactForm.email.$touched">Please Enter Your First Email.</div>
-              </div>
-              <div class="form-group">
-                <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="Phone" name="phone" ng-model="formData.phone">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" rows="3" placeholder="Message*" style="resize:none;" name="message" ng-model="formData.message" required></textarea>
-                <div class="error-msg" ng-show="contactForm.message.$error.required && contactForm.message.$touched">Please Enter Some Message.</div>
-              </div>
-            </form>
-            <div class="pull-right sub">
-              <a href="" class="color-primary" ng-class="{'disabled' : !contactForm.$valid }" ng-click="submitContactForm(contactForm,formData)">SUBMIT</a>
+            <div class="row" ng-repeat="collection in collections track by $index" ui-sref="collection({id:collection.id})">
+                <div class="col-md-offset-4 col-xs-offset-3 col-md-4 col-xs-6">
+                    <div class="category-title text-center">
+                        <h1 class="on-hover-show">{{collection.name}}</h1>
+                        <div class="hover-category">
+                            <a ui-sref="collection"><img ng-src="{{collection.image|serverimage}}" alt="ring" class="img-responsive margin0-auto" style="cursor:pointer;"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-              <div class="submit-over" ng-show="thankyouact">
-              <h2>Thank You!!</h2>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
+</section>
+<section class="section press-section naya-section position-relative" auto-height>
+    <div class="slider-mid width80">
+        <div class="container">
+            <div class="title text-center pt40">
+                <h1 class="f20 bold">PRESS</h1>
+            </div>
+            <div class="row mmt15 pd80">
+                <div class="col-md-4 col-xs-6" ng-repeat="pressitem in press track by $index | limitTo:3 ">
+                    <a ui-sref="press">
+                        <div class="press-box position-relative">
+                            <div class="img-box">
+                                <img ng-src="{{pressitem.image|serverimage}}" alt="{{pressitem.name}}" class="img-responsive">
+                            </div>
+                            <div class="img-descp">
+                                <div class="img-title">
+                                    <span>{{pressitem.name}}</span>
+                                </div>
+                                <div class="img-desc" ng-bind-html="pressitem.description">
+                                    <!-- <P>{{pressitem.desc}}</P> -->
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section stockist-section naya-section position-relative" auto-height>
+    <div class="slider-mid">
+        <div class="container">
+            <div class="title text-center hidden-xs">
+                <h1 class="bold">STOCKISTS</h1>
+            </div>
+            <div class="row mt30">
+                <div class="col-md-offset-4 col-md-4">
+                    <div class="title text-center hidden-md hidden-lg mmt15">
+                        <h1 class="f20">STOCKISTS</h1>
+                    </div>
+                    <div class="title text-center">
+                        <h4 class="f15">SELECT CITY</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-10">
+                            <div class="select-city">
+                                <select class="form-control" ng-model="addressselect" ng-change="getAddress(addressselect)">
+                                    <option value="{{cities.city}}" ng-repeat="cities in stockists track by $index">{{cities.city}}</option>
+                                </select>
+                            </div>
+                            <div class="address" ng-repeat="add in address track by $index" ng-if="address.length !=0">
+                                <div class="address-title mt30 mmt15">
+                                    <h4 class="f15">{{add.title}}
+                                    </h4>
+                                </div>
+                                <div class="address-detail">
+                                    <div ng-bind-html="add.address"></div>
+                                    <p>Tel:
+                                        {{add.phone}}</p>
+                                    <p>Fax:
+                                        {{add.fax}}</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section  category-section position-relative" auto-height>
+    <div class="slider-mid width80">
+        <div class="container">
+            <div class="row mmt40">
+                <div class="col-md-offset-1 col-md-4">
+                    <div class="title">
+                        <h1 class="color-primary f20 bold">CONTACT</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt30 mmt10">
+                <div class="col-md-offset-1 col-md-4 col-sm-5 border-right">
+                    <div class="contact-detail">
+                        <p>#.71, Meher Building,Shivaji Park,</p>
+                        <p>Ranade Road,Dadar West, Mumbai,
+                        </p>
+                        <p>Maharashtra 400028
+                        </p>
+                        <div class="num">
+                            <a href="tel:+912222832422" class="color-primary f16 f13">
+                                +91 22 2445 5034
+                            </a>
+                        </div>
+                        <div class="email">
+                            <a href="mailto:info@naya.com" class="color-primary f16 f13">info@naya.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-offset-1 col-md-4 col-sm-7">
+                    <div class="contact-form">
+                        <div ng-hide="thankyouact">
+                            <form action="" name="contactForm">
+                                <div class="form-group" name="contactForm">
+                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name*" name="name" ng-model="formData.name" required>
+                                    <div class="error-msg" ng-show="contactForm.name.$error.required && contactForm.name.$touched">Please Enter Your Name.</div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email*" name="email" ng-model="formData.email" required>
+                                    <div class="error-msg" ng-show="contactForm.email.$error.required && contactForm.email.$touched">Please Enter Your First Email.</div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="Phone" name="phone" ng-model="formData.phone">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="3" placeholder="Message*" style="resize:none;" name="message" ng-model="formData.message" required></textarea>
+                                    <div class="error-msg" ng-show="contactForm.message.$error.required && contactForm.message.$touched">Please Enter Some Message.</div>
+                                </div>
+                            </form>
+                            <div class="pull-right sub">
+                                <a href="" class="color-primary" ng-class="{'disabled' : !contactForm.$valid }" ng-click="submitContactForm(contactForm,formData)">SUBMIT</a>
+                            </div>
+                        </div>
+                        <div class="submit-over" ng-show="thankyouact">
+                            <h2>Thank You!!</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div ng-include="template.footer" class="template footer footer-css"></div>
-  </section>
+</section>
 </div>
