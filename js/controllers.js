@@ -100,7 +100,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   };
 })
 
-.controller('CollectionCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
+.controller('CollectionCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $state) {
     $scope.template = TemplateService.changecontent("collection");
     $scope.menutitle = NavigationService.makeactive("Collection");
     TemplateService.title = $scope.menutitle;
@@ -129,6 +129,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     //   img: "img/c6.jpg",
     //   desc: "The Lotus is very symbolic and important element in the Chakra’s."
     // }];
+    if (!$stateParams.id) {
+      $state.go('home');
+    }
     console.log($stateParams);
     NavigationService.getOneCollections($stateParams.id, function(data) {
       $scope.collectionsitems = data;
