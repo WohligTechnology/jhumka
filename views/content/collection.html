@@ -1,41 +1,43 @@
 <section class="category-section position-relative pt60">
-  <div ng-include="template.header" class="template header"></div>
-  <div class="container">
-    <div class="min-hght">
-      <div class="row">
-        <div class="col-md-offset-1 col-md-10">
-          <div class="text-center">
-            <div class="title-colletcion">
-              <h1 class="color-primary text-up">{{collectionselected.name}}</h1>
-            </div>
-            <div class="collection-detail">
-              <p class="color-primary" ng-bind-html="collectionselected.description"></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row mt60">
-        <div class="col-md-offset-1 col-md-10">
-          <div class="row">
-            <div class="col-md-4 col-sm-6" ng-repeat="collectionsitem in collectionsitems track by $index">
-              <div class="collection-box collection-ht" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
-                <div class="hover-desc" ng-class="{active: hover}">
-                  <span ng-bind-html="collectionsitem.description">
-                </span>
+    <div ng-include="template.header" class="template header"></div>
+    <div class="container">
+        <div class="min-hght">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-10">
+                    <div class="text-center">
+                        <div class="title-colletcion">
+                            <h1 class="color-primary text-up">{{collectionselected.name}}</h1>
+                        </div>
+                        <div class="collection-detail">
+                            <p class="color-primary" ng-bind-html="collectionselected.description"></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="hover-txt pull-left pad10 visible-xs" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
-                  <img src="img/info.png" alt="">
-                </div>
-                <div class="click pull-right text-center pad10">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="14px" viewBox="0 0 116.801 104.286" enable-background="new 0 0 116.801 104.286" xml:space="preserve">
-                    <g>
-                      <defs>
-                        <rect id="SVGID_1_" width="116.801" height="104.286" />
-                      </defs>
-                      <clipPath id="SVGID_2_">
-                        <use xlink:href="#SVGID_1_" overflow="visible" />
-                      </clipPath>
-                      <path clip-path="url(#SVGID_2_)" fill="#eaeaea" d="M115.562,34.61L82.191,1.239C81.363,0.414,80.387,0,79.258,0s-2.109,0.414-2.934,1.239
+            </div>
+            <div class="row mt60">
+                <div class="col-md-offset-1 col-md-10">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6" ng-repeat="collectionsitem in collectionsitems track by $index">
+                            <div class="collection-box collection-ht" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+                                <div class="hover-desc" ng-class="{active: hover}">
+                                    <span ng-bind-html="collectionsitem.description"></span>
+                                </div>
+                                <div class="hover-txt pull-left pad10 visible-xs" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+                                    <img src="img/info.png" alt="">
+                                </div>
+                                <div class="click pull-right text-center pad10">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="14px" viewBox="0 0 116.801 104.286" enable-background="new 0 0 116.801 104.286" xml:space="preserve">
+                                        <g>
+                                            <defs>
+                                                <rect id="SVGID_1_" width="116.801" height="104.286"/>
+                                            </defs>
+                                            <clipPath id="SVGID_2_">
+                                                <use xlink:href="#SVGID_1_" overflow="visible"/>
+                                            </clipPath>
+                                            <path
+                                                clip-path="url(#SVGID_2_)"
+                                                fill="#eaeaea"
+                                                d="M115.562,34.61L82.191,1.239C81.363,0.414,80.387,0,79.258,0s-2.109,0.414-2.934,1.239
             		c-0.824,0.828-1.238,1.804-1.238,2.933V20.86H60.484c-30.98,0-49.992,8.754-57.031,26.265C1.152,52.946,0,60.185,0,68.829
             		c0,7.214,2.758,17.011,8.277,29.398c0.129,0.305,0.36,0.823,0.684,1.562c0.328,0.739,0.621,1.391,0.879,1.954
             		c0.262,0.566,0.547,1.043,0.851,1.433c0.52,0.738,1.129,1.11,1.825,1.11c0.652,0,1.16-0.215,1.531-0.653
@@ -44,28 +46,28 @@
             		s3.086-4.739,5.215-6.582c2.129-1.848,4.422-3.356,6.875-4.532c2.457-1.172,5.344-2.097,8.668-2.769
             		c3.324-0.677,6.672-1.142,10.039-1.403c3.367-0.261,7.18-0.39,11.438-0.39h14.602v16.687c0,1.129,0.414,2.106,1.238,2.93
             		c0.824,0.828,1.805,1.242,2.934,1.242s2.105-0.414,2.934-1.242l33.37-33.371c0.825-0.824,1.239-1.801,1.239-2.934
-            		C116.801,36.414,116.387,35.438,115.562,34.61" />
-                    </g>
-                  </svg>
-                  <div class="fb-hover">
-                    <i class="fa fa-facebook"></i>
-                    <span class='st_facebook_large' displayText='Facebook'></span>
-                  </div>
-                  <div class="fb-hover">
-                    <i class="fa fa-pinterest"></i>
-                    <span class='st_pinterest' displayText='Pinterest'></span>
-                  </div>
+            		C116.801,36.414,116.387,35.438,115.562,34.61"/>
+                                        </g>
+                                    </svg>
+                                    <div class="fb-hover">
+                                        <i class="fa fa-facebook"></i>
+                                      <span class='st_facebook_large' displayText='Facebook'></span>
+                                    </div>
+                                    <div class="fb-hover">
+                                        <i class="fa fa-pinterest"></i>
+                                        <span class='st_pinterest_large' displayText='Pinterest'></span>
+                                    </div>
+                                </div>
+                                <a fancyBox href="{{collectionsitem.image|serverimage}}" class="fancybox-button" rel="fancybox-button">
+                                    <div class="coll-img-box ">
+                                        <img ng-src="{{collectionsitem.image|serverimage}} " alt="" class="img-responsive ">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <a fancyBox href="{{collectionsitem.image|serverimage}}" class="fancybox-button" rel="fancybox-button">
-                  <div class="coll-img-box ">
-                    <img ng-src="{{collectionsitem.image|serverimage}} " alt="" class="img-responsive ">
-                  </div>
-                </a>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>

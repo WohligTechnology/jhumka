@@ -14,18 +14,22 @@
   .slider {
     width: 560px;
   }
+
   .slider-mid .seeall {
     padding-right: 10px;
   }
+
   .img-title {
     font-size: 16px;
     line-height: 100%;
   }
+
   .img-desc {
     font-size: 13px;
     padding-top: 5px;
     line-height: 100%;
   }
+
   .naya-bow {
     width: 30%;
   }
@@ -35,15 +39,19 @@
   .mt30 {
     margin-top: 10px;
   }
+
   .naya-detail p {
     line-height: 120%;
   }
+
   .press-box {
     margin-bottom: 20px;
   }
+
   .border-right {
     border-right: 0;
   }
+
   .pd80 {
     padding: 20px;
   }
@@ -54,99 +62,157 @@
     width: 75%;
     margin: 0 auto;
   }
+
   .slider-mid {
     width: 100%;
   }
+
   .slider {
     width: 285px;
   }
+
   .social-feed ul li a {
     padding: 5px 0;
   }
+
   .width80 {
     width: 80%;
   }
+
   .width90 {
     width: 90%;
     margin-top: 50px;
   }
+
   .image-menu {
     display: none;
   }
+
   .home-menu ul li {
     padding: 0 7px;
   }
+
   .social-feed {
     padding-top: 10px;
   }
+
   .submit-over h2 {
     width: 100%;
     text-align: center;
   }
+
   .contact-detail {
     padding-left: 0;
     padding-bottom: 10px;
     min-height: inherit!important;
+
     p {
       line-height: 100%;
       margin: 0;
       font-size: 13px;
     }
   }
+
+  .rotateMobile {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    background: #4d4d4d;
+    right: 0;
+    left: 0;
+    text-align: center;
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      color: #fff;
+      top: 60%;
+      left: 50%;
+      position: absolute;
+      @include transform(translate(-50%,-50%));
+    }
+
+    img {
+      width: 27%;
+      margin: 0;
+      font-size: 30px;
+      color: #fff;
+      top: 30%;
+      left: 50%;
+      position: absolute;
+      @include transform(translate(-50%,-50%));
+    }
+  }
 }
 @media (max-width: 480px) {
   .scond {
     padding: 10px 0 14px;
+
     img {
       zoom: 0.7;
     }
   }
+
   .slider-mid .seeall {
     margin-top: -12px;
     padding-right: 0;
   }
+
   .category-title h1 {
     font-size: 24px;
   }
+
   .social-feed ul li a {
     padding: 5px 0;
   }
+
   .navbar-brand img {
     vertical-align: -webkit-baseline-middle;
     zoom: 0.5;
   }
+
   .pl20 {
     padding-left: 0;
   }
+
   .home-menu {
     bottom: 45px;
     width: 100%;
   }
+
   .home-menu ul li {
     padding: 0 4px;
   }
+
   .home-menu ul li a {
     font-size: 13px;
   }
+
   .navbar {
     min-height: 45px;
   }
+
   .menu-hover ul {
     padding-top: 0;
   }
+
   .f20 {
     font-size: 16px;
     margin: 0;
   }
+
   .form-control {
     height: 25px;
   }
+
   .naya-detail p {
     font-size: 11.5px;
     margin: 0 0 7px;
     line-height: 110%;
     text-align: justify;
   }
+
   .naya-content {
     margin-top: 50px;
   }
@@ -156,85 +222,109 @@
   .num {
     font-size: 10px!important;
   }
+
   .mt0 {
     margin-top: 0;
   }
+
   .mobil-w {
     width: 25%;
   }
+
   .width100 {
     width: 100%;
   }
+
   .naya-bow {
     width: 100%;
   }
+
   .naya-bow {
     img {
       margin: 0 auto;
     }
   }
+
   .txt-center {
     text-align: center;
   }
+
   .mmt30 {
     margin-top: 30px;
   }
+
   .mmt40 {
     margin-top: 40px;
   }
+
   .press-box {
     margin-bottom: 10px;
   }
+
   .img-title {
     font-size: 10px;
   }
+
   .img-descp {
     padding: 3px 4px 0;
     min-height: 90px;
   }
+
   .img-desc {
     font-size: 11px;
     padding-top: 6px;
     line-height: 115%;
     text-align: justify;
   }
+
   .mmt15 {
     margin-top: 15px;
   }
+
   .mmt10 {
     margin-top: 0;
   }
+
   .select-city .form-control {
     height: 40px;
     font-size: 19px;
   }
+
   .address-detail p {
     line-height: 60%;
     font-size: 12px;
     text-align: justify;
   }
+
   .f15 {
     font-size: 15px;
   }
+
   .f13 {
     font-size: 10px;
   }
+
   .num span {
     padding: 8px 0;
   }
+
   .border-right {
     border-right: 0 solid #fff;
   }
+
   .sub {
     a {
       font-size: 16px;
     }
   }
+
   .form-group {
     margin-bottom: 5px;
   }
+
   .contact-detail {
     padding-bottom: 5px;
+
     p {
       line-height: 100%;
       margin: 0;
@@ -242,21 +332,27 @@
       text-align: left!important;
     }
   }
+
   .contact-form {
     margin-top: 10px;
   }
+
   .width90 .title {
     margin-bottom: 2px;
   }
+
   .pd80 {
     padding: 0;
   }
+
   textarea.form-control {
     height: 45px;
   }
+
   .collection-ht {
     height: 340px;
   }
+
   .width90 {
     width: 100%;
     margin-top: 20px;
@@ -276,9 +372,11 @@
   .scrolldownflower {
     top: 45%;
   }
+
   .home-menu {
     bottom: 45px;
   }
+
   .scrolldownflower {
     svg:not(:root) {
       overflow: hidden;
@@ -286,6 +384,7 @@
       height: auto;
     }
   }
+
   .contain-mid img {
     width: 85px;
   }
@@ -302,78 +401,59 @@
   .fp-viewing-6 {
     overflow: scroll !important;
   }
+
   .section {
     height: 500px !important;
   }
+
   .title-colletcion h1 {
     font-size: 20px;
     margin-bottom: 0;
   }
+
   .category-title h1 {
     margin: 0;
     font-size: 18px;
   }
+
   .category-title .hover-category a img {
     width: 50px;
   }
+
   .title h1 {
     font-size: 20px;
     margin-bottom: 10px;
     margin-top: 0;
   }
+
   .mrg-landscape {
     margin-top: 35px;
   }
+
   .mobil-w {
     width: 15%;
   }
+
   .category-section {
     overflow: scroll;
     height: 600px!important;
   }
+
   .fp-tableCell {
     height: 600px!important;
   }
+
   .mrg-landscape65 {
     margin-top: 65px;
   }
+
   .press-box {
     margin-bottom: 5px;
     height: 90px;
   }
+
   .img-box {
     height: 100px;
     overflow: hidden;
-  }
-}
-@media (max-width:767px) {
-  .rotateMobile {
-    position: fixed;
-    z-index: 99999;
-    top: 0;
-    bottom: 0;
-    background: #4d4d4d;
-    right: 0;
-    left: 0;
-    text-align: center;
-    h1 {
-      margin: 0;
-      font-size: 30px;
-      color: #fff;
-      top: 60%;
-      left: 50%;
-      position: absolute;
-      @include transform(translate(-50%,-50%));
-    }
-    img {
-      width: 27%;
-      margin: 0;
-      font-size: 30px;
-      color: #fff;
-      top: 30%;
-      left: 50%;
-      position: absolute;
-      @include transform(translate(-50%,-50%));
-    }
   }
 }

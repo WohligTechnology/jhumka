@@ -107,28 +107,23 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = "views/header2.html";
     TemplateService.footer = "";
+    $scope.$on('$viewContentLoaded', function(event) {
+      $timeout(function() {
+        stLight.options({
+          publisher: "ur-46a312b2-8f7d-6d24-5cc0-baae34efb2aa",
+          doNotHash: false,
+          doNotCopy: false,
+          hashAddressBar: false
+        });
+      }, 100);
+      // init
+
+    });
+
     if (typeof $.fn.fullpage.destroy == 'function') {
       $.fn.fullpage.destroy('all');
     }
-    // $scope.collection = [{
-    //   img: "img/c1.jpg",
-    //   desc: "The Lotus is very symbolic and important element in the Chakra’s. "
-    // }, {
-    //   img: "img/c2.jpg",
-    //   desc: "The Lotus is very symbolic and important element in the Chakra’s. "
-    // }, {
-    //   img: "img/c3.jpg",
-    //   desc: "The Lotus is very symbolic and important element in the Chakra’s."
-    // }, {
-    //   img: "img/c4.jpg",
-    //   desc: "The Lotus is very symbolic and important element in the Chakra’s."
-    // }, {
-    //   img: "img/c5.jpg",
-    //   desc: "The Lotus is very symbolic and important element in the Chakra’s."
-    // }, {
-    //   img: "img/c6.jpg",
-    //   desc: "The Lotus is very symbolic and important element in the Chakra’s."
-    // }];
+
     if (!$stateParams.id) {
       $state.go('home');
     }
