@@ -20,7 +20,8 @@
                         <div class="col-md-4 col-sm-6" ng-repeat="collectionsitem in collectionsitems track by $index">
                             <div class="collection-box collection-ht" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
                                 <div class="hover-desc" ng-class="{active: hover}">
-                                    <span ng-bind-html="collectionsitem.description"></span>
+                                    <div ng-bind-html="collectionsitem.description"></div>
+                                    <p class="text-right pointer" ui-sref="contact">Enquire</p>
                                 </div>
                                 <div class="hover-txt pull-left pad10 visible-xs" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
                                     <img src="img/info.png" alt="">

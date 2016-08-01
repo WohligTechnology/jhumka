@@ -1310,4 +1310,17 @@ ol.flex-control-nav.flex-control-paging {
 .rotateMobile {
   display: none;
 }
+
+.pointer {
+  cursor: pointer;
+  @include transition(all ease 300ms);
+
+  &:hover {
+    color: darken(#fff,20%);
+  }
+}
+
+.text-right {
+  text-align: right;
+}
 @import "mobile";
