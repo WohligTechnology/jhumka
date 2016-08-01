@@ -888,6 +888,19 @@ img.fancybox-image {
   @include transition(all ease 300ms);
   overflow: hidden;
 
+  .img-box {
+    height: 320px;
+    overflow: hidden;
+  }
+  // .img-box {
+  //   height: 320px;
+  //
+  //   img {
+  //     height: 100%;
+  //     width: auto;
+  //     margin: 0 auto;
+  //   }
+  // }
   .img-descp {
     width: 100%;
     opacity: 0;

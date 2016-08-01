@@ -63,6 +63,11 @@
     margin: 0 auto;
   }
 
+  .press-box .img-box {
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
   .slider-mid {
     width: 100%;
   }
@@ -152,6 +157,10 @@
     img {
       zoom: 0.7;
     }
+  }
+
+  .press-box .img-box {
+    height: 125px;
   }
 
   .slider-mid .seeall {
