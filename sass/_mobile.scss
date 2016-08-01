@@ -63,6 +63,18 @@
     margin: 0 auto;
   }
 
+  .scrolldownflower {
+    svg:not(:root) {
+      overflow: hidden;
+      width: 60px !important;
+      height: auto;
+    }
+  }
+
+  .contain-mid img {
+    width: 80px;
+  }
+
   .press-box .img-box {
     height: 150px;
     margin-bottom: 20px;
@@ -378,10 +390,6 @@
   }
 }
 @media (max-width: $screen-sm-max) and (orientation : landscape) {
-  .scrolldownflower {
-    top: 45%;
-  }
-
   .home-menu {
     bottom: 45px;
   }

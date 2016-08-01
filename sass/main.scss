@@ -1150,14 +1150,14 @@ ol.flex-control-nav.flex-control-paging {
 
 .scrolldownflower {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  left: 20%;
+  top: 15%;
   @include transform(translate(-50%,-50%));
   z-index: 9999999;
 }
 
 .contain-mid img {
-  width: 125px;
+  width: 100px;
 }
 @-webkit-keyframes chevron-pulse {
   0% {
