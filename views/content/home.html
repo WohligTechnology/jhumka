@@ -344,7 +344,7 @@
                 <h1 class="f20 bold">PRESS</h1>
             </div>
             <div class="row mmt15 pd80">
-                <div class="col-sm-4 col-xs-6" ng-repeat="pressitem in press track by $index | limitTo:3 ">
+                <div class="col-sm-4 col-xs-6" ng-repeat="pressitem in press track by $index " ng-if="$index <3">
                     <a fancyBox href="{{pressitem.image|serverimage}}" class="fancybox-button" rel="fancybox-button">
                         <div class="press-box position-relative">
                             <div class="img-box">
@@ -355,7 +355,6 @@
                                     <p>{{pressitem.name}}</p>
                                 </div>
                                 <div class="img-desc" ng-bind-html="pressitem.description">
-                                    <!-- <P>{{pressitem.desc}}</P> -->
                                 </div>
                             </div>
                         </div>
