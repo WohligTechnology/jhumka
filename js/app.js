@@ -125,7 +125,6 @@ firstapp.filter('serverimage', function() {
       return "";
     }
   };
-  0
 });
 firstapp.directive('autoHeight', function($compile, $parse) {
   return {
@@ -160,8 +159,7 @@ firstapp.directive('fancybox', function($document) {
       target.fancybox({
         beforeShow: function() {
           // console.log(this);
-          if (this.title) {
-          }
+          if (this.title) {}
         },
         // afterShow: function() {
         //   var temp = this.title;

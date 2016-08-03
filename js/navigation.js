@@ -1,5 +1,5 @@
-var adminURL = "http://wohlig.co.in/nayabackend/index.php/";
-var imgurl = "http://wohlig.co.in/nayabackend/uploads/";
+var adminURL = "http://www.nayajewellery.com/admin/index.php/";
+var imgurl = "http://www.nayajewellery.com/admin/uploads/";
 // if(isproduction)
 // {
 //   adminURL =  "http://www.wohlig.co.in/demo/index.php";
@@ -45,7 +45,7 @@ var navigationservice = angular.module('navigationservice', [])
       }).success(callback)
     },
 
-    getAllCollectionscatbyid: function(id,callback) {
+    getAllCollectionscatbyid: function(id, callback) {
       $http.get(adminURL + "json/getcollectionscat?id=" + id).success(callback);
     },
 
@@ -71,7 +71,7 @@ var navigationservice = angular.module('navigationservice', [])
         data: {}
       }).success(callback)
     },
-    getStockistbycity: function(name,callback) {
+    getStockistbycity: function(name, callback) {
       $http.get(adminURL + "json/getstockist?name=" + name).success(callback);
 
     },

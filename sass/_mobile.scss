@@ -161,6 +161,10 @@
       @include transform(translate(-50%,-50%));
     }
   }
+
+  .scrolldownflower {
+    left: 20%;
+  }
 }
 @media (max-width: 480px) {
   .scond {
