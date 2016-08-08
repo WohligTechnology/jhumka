@@ -1,167 +1,114 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="firstapp">
 
-<head ng-controller="headerctrl">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title ng-bind="'Naya - '+template.title">Naya</title>
-  <link rel="shortcut icon" href="img/favicon.ico" />
-  <link rel="stylesheet" type="text/css" href="css/main.css" />
-  <script>
-    var isproduction = false;
-  </script>
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/flexslider/jquery.flexslider-min.js"></script>
-  <script src="bower_components/fancyBox/source/jquery.fancybox.pack.js"></script>
-  <script src="bower_components/fancyBox/source/helpers/jquery.fancybox-buttons.js"></script>
-  <script src="bower_components/fancyBox/source/helpers/jquery.fancybox-media.js"></script>
-  <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
-  <script src="bower_components/fullpage.js/dist/jquery.fullPage.min.js"></script>
+    <head ng-controller="headerctrl">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title ng-bind="'Naya - '+template.title">Naya</title>
+        <link rel="shortcut icon" href="img/favicon.ico"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <script>
+            var isproduction = false;
+        </script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/flexslider/jquery.flexslider-min.js"></script>
+        <script src="bower_components/fancyBox/source/jquery.fancybox.pack.js"></script>
+        <script src="bower_components/fancyBox/source/helpers/jquery.fancybox-buttons.js"></script>
+        <script src="bower_components/fancyBox/source/helpers/jquery.fancybox-media.js"></script>
+        <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+        <script src="bower_components/fullpage.js/dist/jquery.fullPage.min.js"></script>
 
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-animate/angular-animate.js"></script>
-  <script src="bower_components/angular-flexslider/angular-flexslider.js"></script>
-  <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-  <script src="bower_components/ui-router/release/angular-ui-router.min.js"></script>
-  <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-  <script src="bower_components/lodash/lodash.js"></script>
-  <!-- <script src="/bower_components/angular-messages/angular-messages.js"></script> -->
-  <script src="js/widget.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/templateservice.js"></script>
-  <!--[if IE]>
-        <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-flexslider/angular-flexslider.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="bower_components/ui-router/release/angular-ui-router.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/lodash/lodash.js"></script>
+        <!-- <script src="/bower_components/angular-messages/angular-messages.js"></script> -->
+        <script src="js/widget.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/navigation.js"></script>
+        <script src="js/templateservice.js"></script>
+        <!--[if IE]> <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script> <![endif]-->
 
-  <script type="text/javascript">
-    var switchTo5x = true;
-  </script>
-  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-  <script type="text/javascript">
-    stLight.options({
-      publisher: "ur-46a312b2-8f7d-6d24-5cc0-baae34efb2aa",
-      doNotHash: false,
-      doNotCopy: false,
-      hashAddressBar: false
-    });
-  </script>
-</head>
+        <script type="text/javascript">
+            var switchTo5x = true;
+        </script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">
+            stLight.options({publisher: "ur-46a312b2-8f7d-6d24-5cc0-baae34efb2aa", doNotHash: false, doNotCopy: false, hashAddressBar: false});
+        </script>
+    </head>
 
-<body>
-  <div class="repeated-item loadedContent" ui-view></div>
-  <div class="rotateMobile" style="display:none;">
-    <img src="img\logo-mid.png" alt="Naya">
-    <h1>Tilt the mobile for website view </h1>
-    <!--
+    <body>
+        <div class="repeated-item loadedContent" ui-view></div>
+        <div class="rotateMobile" style="display:none;">
+            <img src="img\logo-mid.png" alt="Naya">
+            <h1>Tilt the mobile for website view
+            </h1>
+            <!--
 		<div class="btn-mobile">
 			<button class="btn btn-warning continue" style="padding: 10px 25px!important;font-size: 18px;background: #F6E730;color: #000;">Continue</button>
 		</div>
 -->
-  </div>
-  <script>
-    $(window).load(function() {
-      console.log("Loaded");
-      // $("body > .loader").hide();
-      $("body > .loadedContent").fadeIn(1000);
-      var isMobile = {
-          Android: function () {
-              return navigator.userAgent.match(/Android/i);
-          },
-          BlackBerry: function () {
-              return navigator.userAgent.match(/BlackBerry/i);
-          },
-          iOS: function () {
-              return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        </div>
+        <script>
+            $(window).load(function() {
+                console.log("Loaded");
+                // $("body > .loader").hide();
+                $("body > .loadedContent").fadeIn(1000);
+                var isMobile = {
+                    Android: function() {
+                        return navigator.userAgent.match(/Android/i);
+                    },
+                    BlackBerry: function() {
+                        return navigator.userAgent.match(/BlackBerry/i);
+                    },
+                    iOS: function() {
+                        return navigator.userAgent.match(/iPhone);
           },
           Opera: function () {
-              return navigator.userAgent.match(/Opera Mini/i);
-          },
-          Windows: function () {
-              return navigator.userAgent.match(/IEMobile/i);
-          },
-          any: function () {
-              return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-          }
-      };
-      if (isMobile.any()) {
-      if (window.matchMedia("(orientation: landscape)").matches) {
-        $("body > .rotateMobile").fadeIn(1000);
-        setInterval(function() {
-          console.log("Check");
-          if (window.matchMedia("(orientation:portrait )").matches) {
-            window.location.reload();
-            console.log("Check");
-          }
-        }, 500);
-      }
-      if (window.matchMedia("(orientation: landscape)").matches) {
-        setInterval(function() {
-          console.log("Check");
-          if (window.matchMedia("(orientation: portrait)").matches) {
-            window.location.reload();
-          }
-        }, 500);
-      }
-      $("body > .rotateMobile .continue").click(function() {
-        $("body > .rotateMobile").fadeOut(1000);
-      });
-    }
-    });
-  </script>
-  <script>
-      // var isMobile = {
-      //     Android: function () {
-      //         return navigator.userAgent.match(/Android/i);
-      //     },
-      //     BlackBerry: function () {
-      //         return navigator.userAgent.match(/BlackBerry/i);
-      //     },
-      //     iOS: function () {
-      //         return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-      //     },
-      //     Opera: function () {
-      //         return navigator.userAgent.match(/Opera Mini/i);
-      //     },
-      //     Windows: function () {
-      //         return navigator.userAgent.match(/IEMobile/i);
-      //     },
-      //     any: function () {
-      //         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-      //     }
-      // };
-      // if (isMobile.any()) {
-      //   $("body > .loadedContent").fadeIn(1000);
-      //   if (window.matchMedia("(orientation: landscape)").matches) {
-      //     $("body > .rotateMobile").fadeIn(1000);
-      //     setInterval(function() {
-      //       console.log("Check");
-      //       if (window.matchMedia("(orientation:portrait )").matches) {
-      //         window.location.reload();
-      //         console.log("Check");
-      //       }
-      //     }, 500);
-      //   }
-      //   if (window.matchMedia("(orientation: landscape)").matches) {
-      //     setInterval(function() {
-      //       console.log("Check");
-      //       if (window.matchMedia("(orientation: portrait)").matches) {
-      //         window.location.reload();
-      //       }
-      //     }, 500);
-      //   }
-      //   $("body > .rotateMobile .continue").click(function() {
-      //     $("body > .rotateMobile").fadeOut(1000);
-      //   });
-      // }
-  </script>
-</body>
+              return navigator.userAgent.match(/Opera Mini / i);
+                    },
+                    Windows: function() {
+                        return navigator.userAgent.match(/IEMobile/i);
+                    },
+                    any: function() {
+                        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+                    }
+                };
+                if (isMobile.any()) {
+                    if (window.matchMedia("(orientation: landscape)").matches) {
+                        $("body > .rotateMobile").fadeIn(1000);
+                        setInterval(function() {
+                            console.log("Check");
+                            if (window.matchMedia("(orientation:portrait )").matches) {
+                                window.location.reload();
+                                console.log("Check");
+                            }
+                        }, 500);
+                    }
+                    if (window.matchMedia("(orientation: landscape)").matches) {
+                        setInterval(function() {
+                            console.log("Check");
+                            if (window.matchMedia("(orientation: portrait)").matches) {
+                                window.location.reload();
+                            }
+                        }, 500);
+                    }
+                    $("body > .rotateMobile .continue").click(function() {
+                        $("body > .rotateMobile").fadeOut(1000);
+                    });
+                }
+            });
+        </script>
+    </body>
 
 </html>

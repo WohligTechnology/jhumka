@@ -1307,10 +1307,6 @@ ol.flex-control-nav.flex-control-paging {
   cursor: pointer;
 }
 
-.rotateMobile {
-  display: none;
-}
-
 .pointer {
   cursor: pointer;
   @include transition(all ease 300ms);
@@ -1324,3 +1320,7 @@ ol.flex-control-nav.flex-control-paging {
   text-align: right;
 }
 @import "mobile";
+
+.rotateMobile {
+  display: none;
+}
